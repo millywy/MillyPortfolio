@@ -33,27 +33,31 @@ export default function ArtPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <FadeIn delay={0.1}>
-              <div className="glass-card rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <i className="fas fa-book text-primary text-2xl"></i>
+              <Link href="/art/book-reviews" className="block">
+                <div className="glass-card rounded-xl p-8 text-center hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <i className="fas fa-book text-primary text-2xl"></i>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">Book Reviews</h3>
+                  <p className="text-muted-foreground">
+                    Deep dives into literature that has shaped my thinking, from philosophy to science fiction
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Book Reviews</h3>
-                <p className="text-muted-foreground">
-                  Deep dives into literature that has shaped my thinking, from philosophy to science fiction
-                </p>
-              </div>
+              </Link>
             </FadeIn>
             
             <FadeIn delay={0.2}>
-              <div className="glass-card rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <i className="fas fa-film text-secondary text-2xl"></i>
+              <Link href="/art/movie-commentary" className="block">
+                <div className="glass-card rounded-xl p-8 text-center hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <i className="fas fa-film text-secondary text-2xl"></i>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">Movie Commentary</h3>
+                  <p className="text-muted-foreground">
+                    Analysis of films that explore technology, humanity, and the stories that connect us
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Movie Commentary</h3>
-                <p className="text-muted-foreground">
-                  Analysis of films that explore technology, humanity, and the stories that connect us
-                </p>
-              </div>
+              </Link>
             </FadeIn>
             
             <FadeIn delay={0.3}>

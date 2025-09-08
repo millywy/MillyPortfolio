@@ -21,6 +21,8 @@ import PhilosophyPage from "@/app/opinions/philosophy/page";
 import IdeasPage from "@/app/ideas/page";
 import IdeaDetailPage from "@/app/ideas/[slug]/page";
 import ArtPage from "@/app/art/page";
+import BookReviewsPage from "@/app/art/book-reviews/page";
+import MovieCommentaryPage from "@/app/art/movie-commentary/page";
 import FaithPage from "@/app/faith/page";
 import ExtracurricularsPage from "@/app/extracurriculars/page";
 import AboutPage from "@/app/about/page";
@@ -44,6 +46,8 @@ function Router() {
       <Route path="/ideas" component={IdeasPage} />
       <Route path="/ideas/:slug" component={IdeaDetailPage} />
       <Route path="/art" component={ArtPage} />
+      <Route path="/art/book-reviews" component={BookReviewsPage} />
+      <Route path="/art/movie-commentary" component={MovieCommentaryPage} />
       <Route path="/faith" component={FaithPage} />
       <Route path="/extracurriculars" component={ExtracurricularsPage} />
       <Route path="/about" component={AboutPage} />
