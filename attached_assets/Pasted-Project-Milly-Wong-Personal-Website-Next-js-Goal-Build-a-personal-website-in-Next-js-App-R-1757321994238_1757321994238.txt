@@ -1,6 +1,6 @@
 Project: “Milly Wong — Personal Website (Next.js)”
 
-Goal: Build a personal website in Next.js (App Router) + Tailwind that I can deploy to Vercel and later expand with a 3D landing page. Keep the structure clean, mobile-first, accessible, and ready for GitHub deployment.
+Goal: Build a personal website in React.js (App Router) + Tailwind that I can deploy to Vercel and later expand with a 3D landing page. Keep the structure clean, mobile-first, accessible, and ready for GitHub deployment.
 
 Landing Page (v1):
 	•	For now, create a minimal hero with name, tagline, and CTA.
