@@ -72,9 +72,10 @@ export default {
         "secondary-teal": "hsl(174, 64%, 47%)",
       },
       fontFamily: {
-        sans: ["Inter", "var(--font-sans)", "sans-serif"],
-        serif: ["var(--font-serif)", "serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        sans: ["Inter", "sans-serif"],
+        serif: ["serif"],
+        mono: ["JetBrains Mono", "monospace"],
+        heading: ["Poppins", "sans-serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out",
