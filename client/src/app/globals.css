@@ -73,7 +73,7 @@
   
   /* Links and special elements */
   a, strong, em, code, pre, blockquote {
-    color: #969696;
+    color: #f0f0f0;
   }
   
   /* Main text using your beautiful color palette */
@@ -111,7 +111,7 @@
   }
   
   *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.text-primary):not(.text-accent):not(.text-secondary):not(.gradient-text) {
-    color: #969696 !important;
+    color: #f0f0f0 !important;
   }
   
   .text-muted-foreground {
