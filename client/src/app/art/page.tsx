@@ -61,15 +61,17 @@ export default function ArtPage() {
             </FadeIn>
             
             <FadeIn delay={0.3}>
-              <div className="glass-card rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <i className="fas fa-paint-brush text-accent text-2xl"></i>
+              <Link href="/art/arts" className="block">
+                <div className="glass-card rounded-xl p-8 text-center hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <i className="fas fa-paint-brush text-accent text-2xl"></i>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">Art Analysis</h3>
+                  <p className="text-muted-foreground">
+                    Explorations of visual art, design, and creative works that inspire innovation
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Art Analysis</h3>
-                <p className="text-muted-foreground">
-                  Explorations of visual art, design, and creative works that inspire innovation
-                </p>
-              </div>
+              </Link>
             </FadeIn>
           </div>
           

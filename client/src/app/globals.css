@@ -51,6 +51,19 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    color: hsl(var(--foreground));
+  }
+  
+  p, span, div {
+    color: hsl(var(--foreground));
+  }
+  
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+  
+  .text-foreground {
+    color: hsl(var(--foreground)) !important;
   }
   
   .font-mono {
@@ -98,8 +111,16 @@
   }
   
   .nav-link.active {
-    color: hsl(217, 91%, 60%);
+    color: hsl(217, 91%, 60%) !important;
     font-weight: 600;
+  }
+  
+  .nav-link {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+  
+  .nav-link:hover {
+    color: hsl(var(--foreground)) !important;
   }
   
   .nav-link.active::after {
