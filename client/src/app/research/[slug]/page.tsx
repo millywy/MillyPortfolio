@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { researchProjects } from '@/lib/data'
 import { Link, useParams } from 'wouter'
 
@@ -61,7 +62,49 @@ export default function ResearchPage() {
             </div>
           </FadeIn>
           
+          {/* Research Images and Data */}
           <FadeIn delay={0.2}>
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold mb-6">Research Documentation</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <div className="animate-fade-in-scale">
+                  <ImagePlaceholder 
+                    number={25 + researchProjects.findIndex(r => r.slug === params.slug) * 4 + 1} 
+                    alt={`${research.title} - Methodology`}
+                    aspectRatio="square"
+                    size="md"
+                  />
+                </div>
+                <div className="animate-fade-in-scale" style={{animationDelay: '0.2s'}}>
+                  <ImagePlaceholder 
+                    number={25 + researchProjects.findIndex(r => r.slug === params.slug) * 4 + 2} 
+                    alt={`${research.title} - Data Analysis`}
+                    aspectRatio="square"
+                    size="md"
+                  />
+                </div>
+                <div className="animate-fade-in-scale" style={{animationDelay: '0.4s'}}>
+                  <ImagePlaceholder 
+                    number={25 + researchProjects.findIndex(r => r.slug === params.slug) * 4 + 3} 
+                    alt={`${research.title} - Results`}
+                    aspectRatio="square"
+                    size="md"
+                  />
+                </div>
+              </div>
+              <div className="animate-fly-in-up" style={{animationDelay: '0.6s'}}>
+                <ImagePlaceholder 
+                  number={25 + researchProjects.findIndex(r => r.slug === params.slug) * 4 + 4} 
+                  alt={`${research.title} - Comprehensive Overview`}
+                  aspectRatio="wide"
+                  size="xl"
+                  className="mb-8"
+                />
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.8}>
             <div className="glass-card rounded-xl p-8">
               <div className="prose prose-invert max-w-none">
                 <div dangerouslySetInnerHTML={{ __html: research.content.replace(/\n/g, '<br />') }} />

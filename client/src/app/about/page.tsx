@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { Link } from 'wouter'
 import { extracurriculars } from '@/lib/data'
 
@@ -21,9 +22,62 @@ export default function AboutPage() {
             </div>
           </FadeIn>
           
+          {/* Personal Photos Section */}
+          <FadeIn delay={0.2}>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-12">
+                <span className="gradient-text">Visual Journey</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="animate-fly-in-left">
+                  <ImagePlaceholder 
+                    number={37} 
+                    alt="Milly Wong - Professional Headshot"
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+                <div className="animate-fade-in-scale" style={{animationDelay: '0.2s'}}>
+                  <ImagePlaceholder 
+                    number={38} 
+                    alt="Academic Life at Stanford"
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+                <div className="animate-fly-in-right" style={{animationDelay: '0.4s'}}>
+                  <ImagePlaceholder 
+                    number={39} 
+                    alt="Research and Laboratory Work"
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="animate-fly-in-up" style={{animationDelay: '0.6s'}}>
+                  <ImagePlaceholder 
+                    number={40} 
+                    alt="Basketball and Sports Activities"
+                    aspectRatio="video"
+                    size="md"
+                  />
+                </div>
+                <div className="animate-fly-in-up" style={{animationDelay: '0.8s'}}>
+                  <ImagePlaceholder 
+                    number={41} 
+                    alt="Hong Kong Background and Culture"
+                    aspectRatio="video"
+                    size="md"
+                  />
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Personal Background */}
-            <FadeIn delay={0.2}>
+            <FadeIn delay={1.0}>
               <div className="glass-card rounded-xl p-8">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
                   <i className="fas fa-user text-primary"></i>
@@ -72,7 +126,7 @@ export default function AboutPage() {
             </FadeIn>
             
             {/* Interests & Hobbies */}
-            <FadeIn delay={0.3}>
+            <FadeIn delay={1.1}>
               <div className="glass-card rounded-xl p-8">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
                   <i className="fas fa-heart text-accent"></i>
@@ -141,7 +195,7 @@ export default function AboutPage() {
           </div>
           
           {/* Communities & Activities */}
-          <FadeIn delay={0.4}>
+          <FadeIn delay={1.2}>
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-center mb-12">
                 <span className="gradient-text">Communities & Activities</span>
@@ -176,8 +230,72 @@ export default function AboutPage() {
             </div>
           </FadeIn>
           
+          {/* Contact Information */}
+          <FadeIn delay={1.3}>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-12">
+                <span className="gradient-text">Get In Touch</span>
+              </h2>
+              <div className="glass-card rounded-xl p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <a 
+                    href="mailto:millywy@stanford.edu"
+                    className="flex flex-col items-center p-6 rounded-xl bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-105 group"
+                    data-testid="contact-email-stanford"
+                  >
+                    <div className="w-16 h-16 mb-4 rounded-xl bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <img src="@assets/generated_images/Email_contact_icon_14a68ae3.png" alt="Email" className="w-8 h-8" />
+                    </div>
+                    <h3 className="font-semibold text-primary mb-2">Stanford Email</h3>
+                    <p className="text-sm text-center">millywy@stanford.edu</p>
+                  </a>
+                  
+                  <a 
+                    href="mailto:millywong78@gmail.com"
+                    className="flex flex-col items-center p-6 rounded-xl bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 hover:scale-105 group"
+                    data-testid="contact-email-personal"
+                  >
+                    <div className="w-16 h-16 mb-4 rounded-xl bg-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <img src="@assets/generated_images/Email_contact_icon_14a68ae3.png" alt="Email" className="w-8 h-8" />
+                    </div>
+                    <h3 className="font-semibold text-secondary mb-2">Personal Email</h3>
+                    <p className="text-sm text-center">millywong78@gmail.com</p>
+                  </a>
+                  
+                  <a 
+                    href="https://github.com/millywy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center p-6 rounded-xl bg-accent/10 hover:bg-accent/20 transition-all duration-300 hover:scale-105 group"
+                    data-testid="contact-github"
+                  >
+                    <div className="w-16 h-16 mb-4 rounded-xl bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <img src="@assets/generated_images/GitHub_contact_icon_44d040e0.png" alt="GitHub" className="w-8 h-8" />
+                    </div>
+                    <h3 className="font-semibold text-accent mb-2">GitHub</h3>
+                    <p className="text-sm text-center">@millywy</p>
+                  </a>
+                  
+                  <a 
+                    href="https://www.linkedin.com/in/millyyuwong"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center p-6 rounded-xl bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-105 group"
+                    data-testid="contact-linkedin"
+                  >
+                    <div className="w-16 h-16 mb-4 rounded-xl bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <img src="@assets/generated_images/LinkedIn_contact_icon_d9bc7642.png" alt="LinkedIn" className="w-8 h-8" />
+                    </div>
+                    <h3 className="font-semibold text-primary mb-2">LinkedIn</h3>
+                    <p className="text-sm text-center">millyyuwong</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
           {/* Philosophy & Approach */}
-          <FadeIn delay={0.6}>
+          <FadeIn delay={1.4}>
             <div className="glass-card rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold mb-6">My Philosophy</h2>
               <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed">

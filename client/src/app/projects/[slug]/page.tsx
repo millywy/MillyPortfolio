@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { projects } from '@/lib/data'
 import { Link, useParams } from 'wouter'
 
@@ -76,7 +77,41 @@ export default function ProjectPage() {
             </div>
           </FadeIn>
           
+          {/* Project Images Gallery */}
           <FadeIn delay={0.2}>
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold mb-6">Project Gallery</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="animate-fly-in-left">
+                  <ImagePlaceholder 
+                    number={projects.findIndex(p => p.slug === params.slug) * 3 + 1} 
+                    alt={`${project.title} - Main Overview`}
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+                <div className="animate-fly-in-right" style={{animationDelay: '0.2s'}}>
+                  <ImagePlaceholder 
+                    number={projects.findIndex(p => p.slug === params.slug) * 3 + 2} 
+                    alt={`${project.title} - Technical Details`}
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+              </div>
+              <div className="animate-fly-in-up" style={{animationDelay: '0.4s'}}>
+                <ImagePlaceholder 
+                  number={projects.findIndex(p => p.slug === params.slug) * 3 + 3} 
+                  alt={`${project.title} - Results and Impact`}
+                  aspectRatio="wide"
+                  size="xl"
+                  className="mb-8"
+                />
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.6}>
             <div className="glass-card rounded-xl p-8">
               <div className="prose prose-invert max-w-none">
                 <div dangerouslySetInnerHTML={{ __html: project.content.replace(/\n/g, '<br />') }} />
