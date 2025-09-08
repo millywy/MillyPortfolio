@@ -61,8 +61,31 @@
     color: hsl(var(--foreground));
   }
 
-  a, li, label, small, strong, em, code, pre, blockquote, dt, dd, th, td {
-    color: hsl(var(--foreground));
+  /* Force all text elements to be white */
+  *, *::before, *::after {
+    color: white !important;
+  }
+  
+  a, li, label, small, strong, em, code, pre, blockquote, dt, dd, th, td, 
+  button, input, textarea, select, option, table, tr, td, th,
+  .text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+    color: white !important;
+  }
+  
+  /* Override any Tailwind text color classes */
+  [class*="text-"]:not([class*="text-blue"]):not([class*="text-cyan"]):not([class*="text-indigo"]) {
+    color: white !important;
+  }
+  
+  /* Preserve blue hover effects */
+  a:hover, button:hover, [role="button"]:hover, .nav-link:hover {
+    color: hsl(217, 91%, 60%) !important;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  /* Preserve specific hover classes */
+  .hover\:text-blue-500:hover, .hover\:text-blue-400:hover, .hover\:text-cyan-400:hover {
+    color: hsl(217, 91%, 60%) !important;
   }
   
   .text-muted-foreground {
