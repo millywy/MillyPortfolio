@@ -1,0 +1,78 @@
+import Navigation from '@/components/Navigation'
+import FadeIn from '@/components/FadeIn'
+
+
+export default function ArtPage() {
+  return (
+    <>
+      <Navigation />
+      <main className="pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="gradient-text">Art & Commentary</span>
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Reviews and reflections on books, movies, art, and creative works that inspire me
+              </p>
+            </div>
+          </FadeIn>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <FadeIn delay={0.1}>
+              <div className="glass-card rounded-xl p-8 text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-book text-primary text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold mb-4">Book Reviews</h3>
+                <p className="text-muted-foreground">
+                  Deep dives into literature that has shaped my thinking, from philosophy to science fiction
+                </p>
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.2}>
+              <div className="glass-card rounded-xl p-8 text-center">
+                <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-film text-secondary text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold mb-4">Movie Commentary</h3>
+                <p className="text-muted-foreground">
+                  Analysis of films that explore technology, humanity, and the stories that connect us
+                </p>
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.3}>
+              <div className="glass-card rounded-xl p-8 text-center">
+                <div className="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-paint-brush text-accent text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold mb-4">Art Analysis</h3>
+                <p className="text-muted-foreground">
+                  Explorations of visual art, design, and creative works that inspire innovation
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+          
+          <FadeIn delay={0.4}>
+            <div className="glass-card rounded-xl p-8 text-center">
+              <div className="w-16 h-16 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <i className="fas fa-pen text-muted-foreground text-2xl"></i>
+              </div>
+              <h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                I'm currently working on a collection of reviews and commentary. This section will feature 
+                in-depth analysis of books, films, and artworks that have influenced my thinking about 
+                technology, creativity, and human experience. Check back soon for thoughtful explorations 
+                of works that bridge art and science.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </main>
+    </>
+  )
+}
