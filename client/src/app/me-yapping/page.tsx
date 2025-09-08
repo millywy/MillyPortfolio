@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
+import FloatingBubbles from '@/components/FloatingBubbles'
 import { Link } from 'wouter'
 
 export default function MeYappingPage() {
@@ -36,6 +37,7 @@ export default function MeYappingPage() {
 
   return (
     <>
+      <FloatingBubbles />
       <Navigation />
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

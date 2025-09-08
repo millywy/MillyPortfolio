@@ -3,12 +3,14 @@ import HeroSection from '@/components/HeroSection'
 import FadeIn from '@/components/FadeIn'
 import ProjectCard from '@/components/ProjectCard'
 import ResearchCard from '@/components/ResearchCard'
+import FloatingBubbles from '@/components/FloatingBubbles'
 import { Link } from 'wouter'
 import { projects, researchProjects, coolIdeas, extracurriculars } from '@/lib/data'
 
 export default function HomePage() {
   return (
     <>
+      <FloatingBubbles />
       <Navigation />
       <main className="pt-16">
         <HeroSection />
