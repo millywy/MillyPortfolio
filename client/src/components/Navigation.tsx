@@ -46,7 +46,7 @@ export default function Navigation() {
   }
   
   const navItems = [
-    { id: 'home', label: 'Home', href: '/' },
+    { id: 'home', label: 'Home', href: '/', isHome: true },
     { id: 'projects', label: 'Projects', href: pathname === '/' ? '#projects' : '/projects' },
     { id: 'research', label: 'Research', href: pathname === '/' ? '#research' : '/research' },
     { id: 'yapping', label: 'Me Yapping', href: pathname === '/' ? '#yapping' : '/me-yapping' },
@@ -68,6 +68,22 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
               const isActive = pathname === '/' ? activeSection === item.id : pathname.startsWith(item.href === '/' ? item.href : item.href.split('#')[0])
+              
+              // Special handling for Home button - always use Link for navigation
+              if (item.isHome) {
+                return (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    className={`nav-link relative text-sm font-medium transition-colors ${
+                      isActive ? 'active text-primary' : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                    data-testid={`nav-${item.id}`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              }
               
               return item.href.startsWith('#') ? (
                 <button
@@ -109,8 +125,23 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-card border-t border-border">
           <div className="px-6 py-4 space-y-3">
-            {navItems.map((item) => 
-              item.href.startsWith('#') ? (
+            {navItems.map((item) => {
+              // Special handling for Home button in mobile menu
+              if (item.isHome) {
+                return (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setIsOpen(false)}
+                    data-testid={`mobile-nav-${item.id}`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              }
+              
+              return item.href.startsWith('#') ? (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -130,7 +161,7 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               )
-            )}
+            })}
           </div>
         </div>
       )}

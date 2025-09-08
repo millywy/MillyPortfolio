@@ -48,13 +48,13 @@
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    color: white;
+    color: #969696;
   }
   
-  /* Main body text - clean white */
+  /* Main body text - softer gray */
   p, span, div, li, td, th, label, small, 
   input, textarea, select, button {
-    color: white !important;
+    color: #969696 !important;
   }
   
   /* Headers use your beautiful color palette */
@@ -73,7 +73,7 @@
   
   /* Links and special elements */
   a, strong, em, code, pre, blockquote {
-    color: white;
+    color: #969696;
   }
   
   /* Main text using your beautiful color palette */
@@ -102,7 +102,7 @@
   
   /* Override any dark text from external styles */
   .text-gray-900, .text-black, .text-slate-900, .text-gray-800, .text-gray-700, .text-slate-800 {
-    color: white !important;
+    color: #969696 !important;
   }
   
   /* Force override for any stubborn black text */
@@ -111,7 +111,7 @@
   }
   
   *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.text-primary):not(.text-accent):not(.text-secondary):not(.gradient-text) {
-    color: white !important;
+    color: #969696 !important;
   }
   
   .text-muted-foreground {
