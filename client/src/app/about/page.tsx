@@ -244,7 +244,7 @@ export default function AboutPage() {
                     data-testid="contact-email-stanford"
                   >
                     <div className="w-16 h-16 mb-4 rounded-xl bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <img src="@assets/generated_images/Email_contact_icon_14a68ae3.png" alt="Email" className="w-8 h-8" />
+                      <i className="fas fa-envelope text-primary text-2xl"></i>
                     </div>
                     <h3 className="font-semibold text-primary mb-2">Stanford Email</h3>
                     <p className="text-sm text-center">millywy@stanford.edu</p>
@@ -256,7 +256,7 @@ export default function AboutPage() {
                     data-testid="contact-email-personal"
                   >
                     <div className="w-16 h-16 mb-4 rounded-xl bg-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <img src="@assets/generated_images/Email_contact_icon_14a68ae3.png" alt="Email" className="w-8 h-8" />
+                      <i className="fas fa-envelope text-secondary text-2xl"></i>
                     </div>
                     <h3 className="font-semibold text-secondary mb-2">Personal Email</h3>
                     <p className="text-sm text-center">millywong78@gmail.com</p>
@@ -270,7 +270,7 @@ export default function AboutPage() {
                     data-testid="contact-github"
                   >
                     <div className="w-16 h-16 mb-4 rounded-xl bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <img src="@assets/generated_images/GitHub_contact_icon_44d040e0.png" alt="GitHub" className="w-8 h-8" />
+                      <i className="fab fa-github text-accent text-2xl"></i>
                     </div>
                     <h3 className="font-semibold text-accent mb-2">GitHub</h3>
                     <p className="text-sm text-center">@millywy</p>
@@ -284,7 +284,7 @@ export default function AboutPage() {
                     data-testid="contact-linkedin"
                   >
                     <div className="w-16 h-16 mb-4 rounded-xl bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <img src="@assets/generated_images/LinkedIn_contact_icon_d9bc7642.png" alt="LinkedIn" className="w-8 h-8" />
+                      <i className="fab fa-linkedin text-primary text-2xl"></i>
                     </div>
                     <h3 className="font-semibold text-primary mb-2">LinkedIn</h3>
                     <p className="text-sm text-center">millyyuwong</p>
