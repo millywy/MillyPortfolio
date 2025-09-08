@@ -21,7 +21,7 @@ export default function HeroSection() {
               <span className="gradient-text">Milly Wong</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed" style={{color: 'hsl(var(--muted-foreground))'}}>
               Designer, Developer & Researcher exploring the intersection of 
               <span className="text-primary font-semibold"> technology</span>, 
               <span className="text-accent font-semibold"> creativity</span>, and 
@@ -32,8 +32,8 @@ export default function HeroSection() {
             <div className="glass-card rounded-2xl p-8 max-w-2xl mx-auto my-12 border-2 border-dashed border-primary/30">
               <div className="text-primary/60 text-center">
                 <i className="fas fa-cube text-4xl mb-4 animate-pulse-slow"></i>
-                <p className="text-lg font-medium">3D Interactive Scene</p>
-                <p className="text-sm text-muted-foreground mt-2">Future: Floating islands/brain objects with Spline</p>
+                <p className="text-lg font-medium" style={{color: 'hsl(var(--foreground))'}}>3D Interactive Scene</p>
+                <p className="text-sm mt-2" style={{color: 'hsl(var(--muted-foreground))'}}>Future: Floating islands/brain objects with Spline</p>
               </div>
             </div>
             
@@ -52,7 +52,8 @@ export default function HeroSection() {
               </button>
               <a 
                 href="/cv.pdf"
-                className="glass-card hover:bg-card/50 text-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 inline-block"
+                className="glass-card hover:bg-card/50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 inline-block"
+                style={{color: 'hsl(var(--foreground))'}}
                 data-testid="button-download-cv"
               >
                 Download CV

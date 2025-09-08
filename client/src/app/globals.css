@@ -54,8 +54,8 @@
     color: hsl(var(--foreground));
   }
   
-  p, span, div {
-    color: hsl(var(--foreground));
+  p, span, div, button, a {
+    color: hsl(var(--foreground)) !important;
   }
   
   .text-muted-foreground {
@@ -64,6 +64,45 @@
   
   .text-foreground {
     color: hsl(var(--foreground)) !important;
+  }
+  
+  /* Nuclear option - force ALL text to be light colored */
+  html, body, * {
+    color: #e2e8f0 !important;
+  }
+  
+  /* Force all text elements specifically */
+  p, span, div, h1, h2, h3, h4, h5, h6, button, a, label, input, textarea {
+    color: #e2e8f0 !important;
+  }
+  
+  /* Override ALL dark text utility classes */
+  .text-black,
+  .text-gray-900,
+  .text-slate-900,
+  .text-gray-800,
+  .text-slate-800,
+  .text-neutral-900,
+  .text-stone-900 {
+    color: #e2e8f0 !important;
+  }
+  
+  /* Specific overrides for muted text */
+  .text-muted-foreground {
+    color: #94a3b8 !important;
+  }
+  
+  /* Primary and accent colors should still work */
+  .text-primary {
+    color: hsl(var(--primary)) !important;
+  }
+  
+  .text-secondary {
+    color: hsl(var(--secondary)) !important;
+  }
+  
+  .text-accent {
+    color: hsl(var(--accent)) !important;
   }
   
   .font-mono {
