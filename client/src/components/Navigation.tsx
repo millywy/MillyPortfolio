@@ -58,12 +58,19 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2" data-testid="link-home-logo">
+          <button 
+            onClick={() => {
+              window.location.href = '/'
+              window.scrollTo(0, 0)
+            }} 
+            className="flex items-center space-x-2 cursor-pointer" 
+            data-testid="link-home-logo"
+          >
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">MW</span>
             </div>
             <span className="font-semibold text-lg">Milly Wong</span>
-          </Link>
+          </button>
           
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
@@ -73,19 +80,22 @@ export default function Navigation() {
                   ? activeSection === item.id 
                   : pathname.startsWith(item.href === '/' ? item.href : item.href.split('#')[0])
               
-              // Special handling for Home button - always use Link for navigation
+              // Special handling for Home button - reload page and scroll to top
               if (item.isHome) {
                 return (
-                  <Link
+                  <button
                     key={item.id}
-                    href={item.href}
+                    onClick={() => {
+                      window.location.href = '/'
+                      window.scrollTo(0, 0)
+                    }}
                     className={`nav-link relative text-sm font-medium transition-colors ${
                       isActive ? 'active text-primary' : 'text-muted-foreground hover:text-foreground'
                     }`}
                     data-testid={`nav-${item.id}`}
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 )
               }
               
@@ -133,15 +143,18 @@ export default function Navigation() {
               // Special handling for Home button in mobile menu
               if (item.isHome) {
                 return (
-                  <Link
+                  <button
                     key={item.id}
-                    href={item.href}
-                    className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false)
+                      window.location.href = '/'
+                      window.scrollTo(0, 0)
+                    }}
+                    className="block w-full text-left text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                     data-testid={`mobile-nav-${item.id}`}
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 )
               }
               
