@@ -1,0 +1,90 @@
+Project: “Milly Wong — Personal Website (Next.js)”
+
+Goal: Build a personal website in Next.js (App Router) + Tailwind that I can deploy to Vercel and later expand with a 3D landing page. Keep the structure clean, mobile-first, accessible, and ready for GitHub deployment.
+
+Landing Page (v1):
+	•	For now, create a minimal hero with name, tagline, and CTA.
+	•	Add a placeholder <Home3D /> component where I will later embed an interactive 3D Spline scene with floating “islands/brain” objects.
+	•	Include a temporary sticky nav (anchors) until the 3D scene is ready.
+
+Pages & Sections (App Router):
+	1.	Projects (/projects)
+	•	Each project should be represented as a card with title, short blurb, tags, and placeholder links.
+	•	Projects to include:
+	•	Stanford Linear Accelerator (SLAC) project
+	•	Engineering Education (tunnel monitoring automation)
+	•	Piano Tiles (CS107E embedded project)
+	•	Mr. Washiwashi Puffy (medical device project from BIOE 70Q)
+	•	TEDx BioMimicry talk/project
+	•	Satellite avionics project (SSI)
+	•	Colic-03 robot project
+	•	Personal tutor app (LLM-based)
+	2.	Extracurriculars (/extracurriculars)
+	•	Hong Kong Student Association
+	•	Veritas Forum
+	•	Christian Union
+	•	Stanford Healthcare Design Challenge (SHDC)
+	•	Mellow Project
+	3.	Opinions & Essays (/opinions)
+	•	Subpages for each theme:
+	•	/opinions/politics → gated by passcode (friends-only).
+	•	/opinions/inequality
+	•	/opinions/cultural-differences
+	•	/opinions/friendship
+	•	/opinions/philosophy (general reflections on philosophers).
+	•	Implement the politics page as a simple passcode gate: ask a question (e.g. “What is Milly’s favorite element?”), compare input to NEXT_PUBLIC_POLITICS_PASS, store flag in sessionStorage.
+	4.	Art & Commentary (/art)
+	•	Commentary on books, movies, and art.
+	•	Support text posts, with placeholder for later adding media embeds (voice/video).
+	5.	Cool Ideas / Intellectual Curiosities (/ideas)
+	•	Placeholder posts for: Fourier transform, number systems, Adam Smith’s invisible hand, Le Chatelier’s principle, physics principles, information theory, etc.
+	•	Each should be a card with title + 1–2 line blurb.
+	6.	Research (/research)
+	•	EEG / ERP project
+	•	Ultrasound hardware project
+	•	Energy-saving information theory project (future placeholder).
+	7.	Faith (/faith)
+	•	My testimony.
+	•	Apologetics resources (list of external links).
+	8.	Personal Background (/about)
+	•	Facts: schools, basketball, reading, interests.
+	•	Present as a friendly card layout (“Fun facts”).
+	9.	Contact (/contact)
+	•	Email, GitHub, LinkedIn, CV (placeholders).
+
+Design & vibe:
+	•	Color palette (blue-forward, calm + creative + energetic):
+	•	Prussian Blue #0B3C5D (headings),
+	•	Sky Blue #3BA7FF (links/CTAs),
+	•	Tailwind slate neutrals (slate-900/700/500/50),
+	•	Accent #FFB703 (sparingly),
+	•	Secondary #2EC4B6.
+	•	Layout: max-width ~1024px, responsive grid/cards, ample spacing, sticky nav for v1.
+	•	Motion: use framer-motion <FadeIn> wrapper for sections/cards.
+
+Global features:
+	•	Add a chatbot placeholder: in app/layout.tsx, use next/script with a NEXT_PUBLIC_CHAT_SCRIPT env variable.
+	•	Metadata API: set site title, description, and placeholder OG tags.
+	•	SEO friendly, semantic HTML, alt tags on images.
+
+File structure (App Router):
+	•	app/layout.tsx → metadata, Tailwind, chatbot slot.
+	•	app/page.tsx → temporary hero + nav.
+	•	app/projects/page.tsx → grid of project cards.
+	•	app/extracurriculars/page.tsx → list with descriptions.
+	•	app/opinions/... → subpages, with /opinions/politics/page.tsx gated.
+	•	app/art/page.tsx → commentary placeholder.
+	•	app/ideas/page.tsx → intellectual curiosities cards.
+	•	app/research/page.tsx → research projects.
+	•	app/faith/page.tsx → testimony + apologetics links.
+	•	app/about/page.tsx → fun facts.
+	•	app/contact/page.tsx → links.
+	•	components/FadeIn.tsx → framer-motion helper.
+	•	app/globals.css → Tailwind + smooth scrolling.
+
+Acceptance criteria:
+	•	Pages build and route correctly.
+	•	Nav links anchor within landing or link to routes.
+	•	FadeIn animation works.
+	•	Politics page gating uses NEXT_PUBLIC_POLITICS_PASS.
+	•	Code is ready to push to GitHub and deploy on Vercel.
