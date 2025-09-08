@@ -4,36 +4,36 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(220, 50%, 6%);
-  --foreground: hsl(213, 31%, 95%);
-  --card: hsl(218, 45%, 8%);
-  --card-foreground: hsl(213, 31%, 95%);
-  --popover: hsl(218, 45%, 8%);
-  --popover-foreground: hsl(213, 31%, 95%);
-  --primary: hsl(217, 91%, 65%);
-  --primary-foreground: hsl(220, 50%, 6%);
-  --secondary: hsl(195, 75%, 35%);
-  --secondary-foreground: hsl(213, 31%, 95%);
-  --muted: hsl(215, 25%, 18%);
-  --muted-foreground: hsl(215, 20%, 70%);
-  --accent: hsl(45, 95%, 60%);
-  --accent-foreground: hsl(220, 50%, 6%);
-  --destructive: hsl(0, 70%, 45%);
-  --destructive-foreground: hsl(213, 31%, 95%);
-  --border: hsl(215, 25%, 18%);
-  --input: hsl(215, 25%, 18%);
-  --ring: hsl(217, 91%, 65%);
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 7%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222, 84%, 7%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(195, 100%, 45%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --muted: hsl(215, 27%, 16%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(48, 96%, 65%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 62%, 50%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(215, 27%, 16%);
+  --input: hsl(215, 27%, 16%);
+  --ring: hsl(217, 91%, 60%);
   --radius: 0.75rem;
   
-  /* Custom colors from requirements */
-  --prussian-blue: hsl(207, 83%, 25%);
-  --sky-blue: hsl(211, 100%, 65%);
-  --slate-900: hsl(220, 84%, 4%);
-  --slate-700: hsl(215, 30%, 20%);
-  --slate-500: hsl(215, 20%, 45%);
-  --slate-50: hsl(210, 40%, 98%);
-  --accent-yellow: hsl(45, 100%, 60%);
-  --secondary-teal: hsl(174, 70%, 45%);
+  /* Custom dark theme blue-yellow palette */
+  --electric-blue: hsl(217, 91%, 60%);
+  --cyber-blue: hsl(195, 100%, 45%);
+  --neon-yellow: hsl(48, 96%, 65%);
+  --gold-accent: hsl(45, 100%, 58%);
+  --deep-navy: hsl(222, 84%, 5%);
+  --dark-slate: hsl(215, 27%, 16%);
+  --bright-cyan: hsl(180, 100%, 50%);
+  --amber-glow: hsl(40, 100%, 60%);
 }
 
 @layer base {
@@ -42,7 +42,7 @@
   }
   
   body {
-    background: linear-gradient(135deg, hsl(220, 50%, 6%) 0%, hsl(218, 45%, 4%) 100%);
+    background: linear-gradient(135deg, hsl(222, 84%, 5%) 0%, hsl(220, 90%, 3%) 100%);
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -64,21 +64,21 @@
 
 @layer components {
   .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    background: rgba(33, 150, 243, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(33, 150, 243, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, hsl(217, 91%, 59%) 0%, hsl(48, 96%, 53%) 100%);
+    background: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(48, 96%, 65%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .hero-gradient {
-    background: radial-gradient(ellipse at center, hsl(217, 91%, 65%, 0.2) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, hsl(217, 91%, 60%, 0.15) 0%, hsl(48, 96%, 65%, 0.05) 50%, transparent 70%);
   }
   
   .section-reveal {
@@ -94,11 +94,11 @@
   
   .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(59, 167, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(33, 150, 243, 0.2), 0 0 30px rgba(255, 215, 0, 0.1);
   }
   
   .nav-link.active {
-    color: hsl(217, 91%, 59%);
+    color: hsl(217, 91%, 60%);
     font-weight: 600;
   }
   
@@ -109,7 +109,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: hsl(217, 91%, 59%);
+    background: linear-gradient(90deg, hsl(217, 91%, 60%) 0%, hsl(48, 96%, 65%) 100%);
     border-radius: 1px;
   }
 }

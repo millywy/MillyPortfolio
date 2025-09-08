@@ -76,7 +76,7 @@ export default function FloatingBubbles() {
             top: `${bubble.y}px`,
             width: `${bubble.size}px`,
             height: `${bubble.size}px`,
-            background: `radial-gradient(circle, rgba(59, 130, 246, ${bubble.opacity}) 0%, rgba(59, 130, 246, 0) 70%)`,
+            background: `radial-gradient(circle, rgba(33, 150, 243, ${bubble.opacity}) 0%, rgba(255, 215, 0, ${bubble.opacity * 0.3}) 50%, transparent 70%)`,
             transition: 'all 0.1s ease-out'
           }}
         />

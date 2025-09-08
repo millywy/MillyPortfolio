@@ -443,7 +443,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <a href="/privacy" className="hover:text-foreground transition-colors">Privacy</a>
               <a href="/terms" className="hover:text-foreground transition-colors">Terms</a>
-              <span>Built with Next.js & Tailwind</span>
+              <span>Built with React & Tailwind</span>
             </div>
           </div>
         </div>
