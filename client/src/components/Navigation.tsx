@@ -67,7 +67,11 @@ export default function Navigation() {
           
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
-              const isActive = pathname === '/' ? activeSection === item.id : pathname.startsWith(item.href === '/' ? item.href : item.href.split('#')[0])
+              const isActive = item.isHome 
+                ? pathname === '/' && activeSection === item.id
+                : pathname === '/' 
+                  ? activeSection === item.id 
+                  : pathname.startsWith(item.href === '/' ? item.href : item.href.split('#')[0])
               
               // Special handling for Home button - always use Link for navigation
               if (item.isHome) {
