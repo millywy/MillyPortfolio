@@ -53,6 +53,17 @@ export default function OpinionsPage() {
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn>
+            <div className="mb-8">
+              <Link
+                href="/me-yapping"
+                className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2 mb-6"
+                data-testid="link-back-me-yapping"
+              >
+                <i className="fas fa-arrow-left"></i>
+                Back to Me Yapping
+              </Link>
+            </div>
+            
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="gradient-text">Opinions & Essays</span>

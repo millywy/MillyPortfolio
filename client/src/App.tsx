@@ -11,6 +11,7 @@ import ProjectsPage from "@/app/projects/page";
 import ProjectDetailPage from "@/app/projects/[slug]/page";
 import ResearchPage from "@/app/research/page";
 import ResearchDetailPage from "@/app/research/[slug]/page";
+import MeYappingPage from "@/app/me-yapping/page";
 import OpinionsPage from "@/app/opinions/page";
 import PoliticsPage from "@/app/opinions/politics/page";
 import InequalityPage from "@/app/opinions/inequality/page";
@@ -33,6 +34,7 @@ function Router() {
       <Route path="/projects/:slug" component={ProjectDetailPage} />
       <Route path="/research" component={ResearchPage} />
       <Route path="/research/:slug" component={ResearchDetailPage} />
+      <Route path="/me-yapping" component={MeYappingPage} />
       <Route path="/opinions" component={OpinionsPage} />
       <Route path="/opinions/politics" component={PoliticsPage} />
       <Route path="/opinions/inequality" component={InequalityPage} />

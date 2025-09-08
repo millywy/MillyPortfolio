@@ -49,7 +49,7 @@ export default function Navigation() {
     { id: 'home', label: 'Home', href: '/' },
     { id: 'projects', label: 'Projects', href: pathname === '/' ? '#projects' : '/projects' },
     { id: 'research', label: 'Research', href: pathname === '/' ? '#research' : '/research' },
-    { id: 'yapping', label: 'Me Yapping', href: pathname === '/' ? '#yapping' : '/opinions' },
+    { id: 'yapping', label: 'Me Yapping', href: pathname === '/' ? '#yapping' : '/me-yapping' },
     { id: 'about', label: 'About', href: pathname === '/' ? '#about' : '/about' },
     { id: 'contact', label: 'Contact', href: pathname === '/' ? '#contact' : '/contact' },
   ]

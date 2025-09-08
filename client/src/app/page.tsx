@@ -126,7 +126,7 @@ export default function HomePage() {
               {/* Opinions & Essays Subsection */}
               <FadeIn delay={0.3}>
                 <Link 
-                  href="/opinions"
+                  href="/me-yapping"
                   className="block glass-card rounded-xl p-8 hover:bg-card/50 transition-all duration-500 group cursor-pointer"
                   data-testid="link-opinions"
                 >
