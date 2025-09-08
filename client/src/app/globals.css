@@ -48,22 +48,32 @@
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    color: hsl(var(--foreground));
+    color: white;
   }
   
+  /* Main body text - clean white */
+  p, span, div, li, td, th, label, small, 
+  input, textarea, select, button {
+    color: white !important;
+  }
+  
+  /* Headers use your beautiful color palette */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: hsl(var(--foreground));
   }
   
-  p, span, div {
-    color: hsl(var(--foreground));
-  }
-
-  /* Use the beautiful color palette for text */
-  a, li, label, small, strong, em, code, pre, blockquote, dt, dd, th, td {
-    color: hsl(var(--foreground));
+  /* Specific header colors from your palette */
+  h1 { color: var(--electric-blue) !important; }
+  h2 { color: var(--neon-yellow) !important; }
+  h3 { color: var(--cyber-blue) !important; }
+  h4 { color: var(--gold-accent) !important; }
+  h5 { color: var(--bright-cyan) !important; }
+  h6 { color: var(--amber-glow) !important; }
+  
+  /* Links and special elements */
+  a, strong, em, code, pre, blockquote {
+    color: white;
   }
   
   /* Main text using your beautiful color palette */
@@ -90,9 +100,18 @@
     color: var(--amber-glow) !important;
   }
   
-  /* Override dark text from external styles while preserving your theme */
-  .text-gray-900, .text-black, .text-slate-900 {
-    color: hsl(var(--foreground)) !important;
+  /* Override any dark text from external styles */
+  .text-gray-900, .text-black, .text-slate-900, .text-gray-800, .text-gray-700, .text-slate-800 {
+    color: white !important;
+  }
+  
+  /* Force override for any stubborn black text */
+  * {
+    color: inherit;
+  }
+  
+  *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.text-primary):not(.text-accent):not(.text-secondary):not(.gradient-text) {
+    color: white !important;
   }
   
   .text-muted-foreground {
