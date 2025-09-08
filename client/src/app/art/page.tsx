@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { Link } from 'wouter'
 
 
@@ -28,6 +29,39 @@ export default function ArtPage() {
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Reviews and reflections on books, movies, art, and creative works that inspire me
               </p>
+            </div>
+          </FadeIn>
+          
+          {/* Art Inspiration Gallery */}
+          <FadeIn delay={0.2}>
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold mb-8 text-center">Creative Inspiration</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="animate-fade-in-scale">
+                  <ImagePlaceholder 
+                    number={48} 
+                    alt="Book Covers and Literary Analysis"
+                    aspectRatio="photo"
+                    size="md"
+                  />
+                </div>
+                <div className="animate-fade-in-scale" style={{animationDelay: '0.2s'}}>
+                  <ImagePlaceholder 
+                    number={49} 
+                    alt="Film Stills and Cinema Commentary"
+                    aspectRatio="photo"
+                    size="md"
+                  />
+                </div>
+                <div className="animate-fade-in-scale" style={{animationDelay: '0.4s'}}>
+                  <ImagePlaceholder 
+                    number={50} 
+                    alt="Art Pieces and Visual Analysis"
+                    aspectRatio="photo"
+                    size="md"
+                  />
+                </div>
+              </div>
             </div>
           </FadeIn>
           

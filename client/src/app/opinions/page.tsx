@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { Link } from 'wouter'
 
 
@@ -71,6 +72,31 @@ export default function OpinionsPage() {
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Personal reflections on society, culture, philosophy, and the human experience
               </p>
+            </div>
+          </FadeIn>
+          
+          {/* Opinion Themes Gallery */}
+          <FadeIn delay={0.2}>
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold mb-8 text-center">Themes & Perspectives</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="animate-fly-in-left">
+                  <ImagePlaceholder 
+                    number={46} 
+                    alt="Social Issues and Cultural Commentary"
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+                <div className="animate-fly-in-right" style={{animationDelay: '0.3s'}}>
+                  <ImagePlaceholder 
+                    number={47} 
+                    alt="Philosophy and Deep Thinking"
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+              </div>
             </div>
           </FadeIn>
           

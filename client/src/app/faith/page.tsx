@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { Link } from 'wouter'
 
 
@@ -28,6 +29,40 @@ export default function FaithPage() {
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 My spiritual journey, testimony, and resources for exploring questions of faith and meaning
               </p>
+            </div>
+          </FadeIn>
+          
+          {/* Faith Journey Visual Story */}
+          <FadeIn delay={0.2}>
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold mb-8 text-center">Journey of Faith</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="animate-fly-in-left">
+                  <ImagePlaceholder 
+                    number={51} 
+                    alt="Faith and Science Integration"
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+                <div className="animate-fly-in-right" style={{animationDelay: '0.3s'}}>
+                  <ImagePlaceholder 
+                    number={52} 
+                    alt="Community and Spiritual Growth"
+                    aspectRatio="photo"
+                    size="lg"
+                  />
+                </div>
+              </div>
+              <div className="animate-fly-in-up" style={{animationDelay: '0.6s'}}>
+                <ImagePlaceholder 
+                  number={53} 
+                  alt="Stanford Faith Communities and Events"
+                  aspectRatio="wide"
+                  size="xl"
+                  className="mb-8"
+                />
+              </div>
             </div>
           </FadeIn>
           
