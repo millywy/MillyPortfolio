@@ -102,7 +102,7 @@
   
   /* Override any dark text from external styles */
   .text-gray-900, .text-black, .text-slate-900, .text-gray-800, .text-gray-700, .text-slate-800 {
-    color: #969696 !important;
+    color: #f0f0f0 !important;
   }
   
   /* Force override for any stubborn black text */
@@ -111,7 +111,7 @@
   }
   
   *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.text-primary):not(.text-accent):not(.text-secondary):not(.gradient-text) {
-    color: #969696 !important;
+    color: #f0f0f0 !important;
   }
   
   .text-muted-foreground {
