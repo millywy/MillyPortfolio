@@ -374,36 +374,36 @@ export default function HomePage() {
             
             <FadeIn delay={0.2}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <a href="mailto:milly@example.com" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-email">
+                <a href="mailto:millywy@stanford.edu" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-email-stanford">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     <i className="fas fa-envelope text-primary text-xl"></i>
                   </div>
-                  <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">Email</h3>
-                  <p className="text-sm text-muted-foreground">milly@example.com</p>
+                  <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">Stanford Email</h3>
+                  <p className="text-sm text-muted-foreground">millywy@stanford.edu</p>
                 </a>
                 
-                <a href="https://github.com/millywong" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-github">
+                <a href="https://github.com/millywy" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-github">
                   <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     <i className="fab fa-github text-secondary text-xl"></i>
                   </div>
                   <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">GitHub</h3>
-                  <p className="text-sm text-muted-foreground">@millywong</p>
+                  <p className="text-sm text-muted-foreground">@millywy</p>
                 </a>
                 
-                <a href="https://linkedin.com/in/millywong" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-linkedin">
+                <a href="https://www.linkedin.com/in/millyyuwong" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-linkedin">
                   <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     <i className="fab fa-linkedin text-accent text-xl"></i>
                   </div>
                   <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">LinkedIn</h3>
-                  <p className="text-sm text-muted-foreground">Milly Wong</p>
+                  <p className="text-sm text-muted-foreground">millyyuwong</p>
                 </a>
                 
-                <a href="/cv.pdf" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-cv">
+                <a href="mailto:millywong78@gmail.com" className="glass-card rounded-xl p-6 hover:bg-card/50 transition-all duration-300 hover:scale-105 group" data-testid="link-email-personal">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <i className="fas fa-file-pdf text-primary text-xl"></i>
+                    <i className="fas fa-envelope text-primary text-xl"></i>
                   </div>
-                  <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">Resume</h3>
-                  <p className="text-sm text-muted-foreground">Download CV</p>
+                  <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">Personal Email</h3>
+                  <p className="text-sm text-muted-foreground">millywong78@gmail.com</p>
                 </a>
               </div>
             </FadeIn>
@@ -438,7 +438,7 @@ export default function HomePage() {
               <div className="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xs">MW</span>
               </div>
-              <span className="font-medium">© 2024 Milly Wong</span>
+              <span className="font-medium">© 2025 Milly Wong</span>
             </div>
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <a href="/privacy" className="hover:text-foreground transition-colors">Privacy</a>
