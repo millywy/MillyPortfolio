@@ -94,11 +94,9 @@ export default function AboutPage() {
                         </div>
                         <div>
                           <h4 className="font-semibold mb-1">Stanford University</h4>
-                          <p className="text-muted-foreground text-sm mb-2">B.S. in Bioengineering with a focus on Computer Science</p>
+                          <p className="text-muted-foreground text-sm mb-2">BS EE (2027), MS CS (2028), GPA 3.9</p>
                           <p className="text-muted-foreground text-sm">
-                            Studying at the intersection of biology, engineering, and computation. 
-                            My coursework spans from molecular biology to machine learning, 
-                            preparing me to tackle complex challenges in healthcare technology.
+                            Coursework: EE101A/B (Circuits), EE102A/B (Signals & Systems), CS106B (Object-oriented programming), CS103 (Discrete Math), CS107E (Embedded programming), CS109 (Probability), CS 111 (Systems), MATH104 (Linear Algebra), MATH51(Multi-variable Calc & Linear Algebra), MATH53 (ODE & Fourier Transform), PHY61(Special Relativity and Mechanics).
                           </p>
                         </div>
                       </div>
@@ -112,10 +110,10 @@ export default function AboutPage() {
                         <i className="fas fa-globe text-secondary text-sm"></i>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-1">Hong Kong Roots</h4>
+                        <h4 className="font-semibold mb-1">Prior Education</h4>
                         <p className="text-muted-foreground text-sm">
-                          Born and raised in Hong Kong, I bring a unique East-meets-West perspective 
-                          to my work. This multicultural background has shaped my approach to 
+                          Cardiff Sixth Form College, United Kingdom; Heep Yunn School, Hong Kong. 
+                          This multicultural background has shaped my approach to 
                           problem-solving and collaboration across diverse teams.
                         </p>
                       </div>
@@ -230,89 +228,16 @@ export default function AboutPage() {
             </div>
           </FadeIn>
           
-          {/* Contact Information */}
-          <FadeIn delay={1.3}>
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12">
-                <span className="gradient-text">Get In Touch</span>
-              </h2>
-              <div className="glass-card rounded-xl p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <a 
-                    href="mailto:millywy@stanford.edu"
-                    className="flex flex-col items-center p-6 rounded-xl bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-105 group"
-                    data-testid="contact-email-stanford"
-                  >
-                    <div className="w-16 h-16 mb-4 rounded-xl bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <i className="fas fa-envelope text-primary text-2xl"></i>
-                    </div>
-                    <h3 className="font-semibold text-primary mb-2">Stanford Email</h3>
-                    <p className="text-sm text-center">millywy@stanford.edu</p>
-                  </a>
-                  
-                  <a 
-                    href="mailto:millywong78@gmail.com"
-                    className="flex flex-col items-center p-6 rounded-xl bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 hover:scale-105 group"
-                    data-testid="contact-email-personal"
-                  >
-                    <div className="w-16 h-16 mb-4 rounded-xl bg-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <i className="fas fa-envelope text-secondary text-2xl"></i>
-                    </div>
-                    <h3 className="font-semibold text-secondary mb-2">Personal Email</h3>
-                    <p className="text-sm text-center">millywong78@gmail.com</p>
-                  </a>
-                  
-                  <a 
-                    href="https://github.com/millywy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center p-6 rounded-xl bg-accent/10 hover:bg-accent/20 transition-all duration-300 hover:scale-105 group"
-                    data-testid="contact-github"
-                  >
-                    <div className="w-16 h-16 mb-4 rounded-xl bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <i className="fab fa-github text-accent text-2xl"></i>
-                    </div>
-                    <h3 className="font-semibold text-accent mb-2">GitHub</h3>
-                    <p className="text-sm text-center">@millywy</p>
-                  </a>
-                  
-                  <a 
-                    href="https://www.linkedin.com/in/millyyuwong"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center p-6 rounded-xl bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-105 group"
-                    data-testid="contact-linkedin"
-                  >
-                    <div className="w-16 h-16 mb-4 rounded-xl bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <i className="fab fa-linkedin text-primary text-2xl"></i>
-                    </div>
-                    <h3 className="font-semibold text-primary mb-2">LinkedIn</h3>
-                    <p className="text-sm text-center">millyyuwong</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
           {/* Philosophy & Approach */}
-          <FadeIn delay={1.4}>
+          <FadeIn delay={1.3}>
             <div className="glass-card rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold mb-6">My Philosophy</h2>
               <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  I believe that the best solutions emerge at the intersection of disciplines. 
-                  Whether I'm working on brain-computer interfaces, medical devices, or educational 
-                  technology, I approach each challenge with curiosity, empathy, and a commitment 
-                  to understanding the human needs behind the technical requirements.
-                </p>
-                <p>
-                  Technology should serve humanity, not the other way around. My goal is to 
-                  create solutions that are not only technically excellent but also accessible, 
-                  meaningful, and respectful of human dignity.
+                  Technology must serve people and communities, not just markets. Faith and love guide me to engineer systems that are powerful and humane. I reflect on my mistakes often, eager to grow. My mission is lasting social good.
                 </p>
                 <p className="text-primary font-medium">
-                  "The best way to find yourself is to lose yourself in the service of others." 
-                  — Mahatma Gandhi
+                  "We love because He first loved us." (1 John 4:19)
                 </p>
               </div>
             </div>

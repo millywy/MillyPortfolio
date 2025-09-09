@@ -12,7 +12,7 @@ export default function Navigation() {
     const handleScroll = () => {
       if (pathname !== '/') return
       
-      const sections = ['home', 'projects', 'research', 'yapping', 'about', 'contact']
+      const sections = ['home', 'projects', 'yapping', 'about', 'contact']
       let current = 'home'
       
       for (const section of sections) {
@@ -48,8 +48,7 @@ export default function Navigation() {
   const navItems = [
     { id: 'home', label: 'Home', href: '/', isHome: true },
     { id: 'projects', label: 'Projects', href: pathname === '/' ? '#projects' : '/projects' },
-    { id: 'research', label: 'Research', href: pathname === '/' ? '#research' : '/research' },
-    { id: 'yapping', label: 'Me Yapping', href: pathname === '/' ? '#yapping' : '/me-yapping' },
+    { id: 'yapping', label: 'Curiosities & Reflections', href: pathname === '/' ? '#yapping' : '/me-yapping' },
     { id: 'about', label: 'About', href: pathname === '/' ? '#about' : '/about' },
     { id: 'contact', label: 'Contact', href: pathname === '/' ? '#contact' : '/contact' },
   ]

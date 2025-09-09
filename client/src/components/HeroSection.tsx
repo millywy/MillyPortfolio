@@ -22,10 +22,14 @@ export default function HeroSection() {
             </h1>
             
             <p className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto leading-relaxed">
-              Designer, Developer & Researcher exploring the intersection of 
+              Engineer and builder using 
               <span className="text-primary font-semibold"> technology</span>, 
-              <span className="text-accent font-semibold"> creativity</span>, and 
-              <span className="text-secondary font-semibold"> human experience</span>
+              <span className="text-accent font-semibold"> faith</span>, and 
+              <span className="text-secondary font-semibold"> creativity</span> to serve people and make the world more just.
+            </p>
+            
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Stanford EE & CS • Robotics • Signal Processing • Healthcare Tech • Faith-driven innovation.
             </p>
             
             {/* 3D Scene placeholder */}

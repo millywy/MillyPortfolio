@@ -107,7 +107,22 @@ export default function ResearchPage() {
           <FadeIn delay={0.8}>
             <div className="glass-card rounded-xl p-8">
               <div className="prose prose-invert max-w-none">
-                <div dangerouslySetInnerHTML={{ __html: research.content.replace(/\n/g, '<br />') }} />
+                <div 
+                  dangerouslySetInnerHTML={{ 
+                    __html: research.content
+                      .replace(/\n/g, '<br />')
+                      .replace(/# (.*?)(<br \/>|$)/g, '<h1 class="text-3xl font-bold mb-6 text-primary">$1</h1>')
+                      .replace(/## (.*?)(<br \/>|$)/g, '<h2 class="text-lg font-semibold mb-0 mt-2 text-yellow-400">$1</h2>')
+                      .replace(/^- (.*?)(<br \/>|$)/g, '<li class="mb-0 text-foreground">$1</li>')
+                      .replace(/<br \/><br \/>/g, '<br />')
+                      .replace(/<h1>/g, '<h1 class="text-3xl font-bold mb-6 text-primary">')
+                      .replace(/<h2>/g, '<h2 class="text-lg font-semibold mb-0 mt-2 text-yellow-400">')
+                      .replace(/<p>/g, '<p class="mb-0 text-foreground leading-relaxed">')
+                      .replace(/<ul>/g, '<ul class="mb-0 ml-4">')
+                      .replace(/<li>/g, '<li class="mb-0 text-foreground">')
+                      .replace(/# /g, '')
+                  }} 
+                />
               </div>
             </div>
           </FadeIn>

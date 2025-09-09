@@ -1,324 +1,495 @@
 export const projects = [
   {
-    slug: 'stanford-linear-accelerator',
-    title: 'Stanford Linear Accelerator (SLAC)',
-    description: 'Advanced particle physics research and accelerator technology development',
-    tags: ['Physics', 'Research', 'Hardware'],
-    icon: 'fas fa-atom',
+    slug: 'information-efficient-ultrasound',
+    title: 'Information-Efficient Ultrasound Sensing',
+    description: 'Designing ultra-low-power pipeline for cardiovascular ultrasound by triggering bursts from PPG-derived heartbeat and reducing duty cycle without losing diagnostic signal fidelity.',
+    tags: ['Research', 'Signal Processing', 'Healthcare Tech'],
+    icon: 'fas fa-heartbeat',
     color: 'primary' as const,
     content: `
-# Stanford Linear Accelerator (SLAC) Project
-
-## Overview
-Working on cutting-edge particle physics research at the Stanford Linear Accelerator Center, contributing to fundamental understanding of matter and energy.
-
-## Key Contributions
-- Advanced accelerator technology development
-- Particle beam optimization
-- Data analysis and interpretation
-- Hardware calibration and maintenance
-
-## Technologies Used
-- Particle accelerator systems
-- High-energy physics detectors
-- Data acquisition systems
-- Statistical analysis software
-
-## Impact
-This research contributes to our fundamental understanding of physics and has applications in medical imaging, materials science, and energy research.
+<h1>Cutting Power with Information Theory in Wearable Ultrasound</h1>
+<h2>Role</h2>
+<p>Lead researcher/engineer</p>
+<h2>Dates</h2>
+<p>2025—present</p>
+<h2>TL;DR</h2>
+<p>Designing an ultra-low-power pipeline for cardiovascular ultrasound by triggering bursts from a PPG-derived heartbeat and reducing duty cycle without losing diagnostic signal fidelity.</p>
+<h2>Context</h2>
+<p>Wearable ultrasound is data- and power-hungry. Always-on excitation and sampling waste energy.</p>
+<h2>My Tasks</h2>
+<p>Problem framing; modeling SNR vs. duty-cycle; designing PPG→ultrasound trigger; firmware sample-gating; analysis pipeline; experiments on phantoms.</p>
+<h2>Methods & Stack</h2>
+<p>PZT transducers; analog front-end; matched-filtering; burst excitation; R-wave gating (PPG proxy); mutual information estimates for feature retention; Python (NumPy/SciPy/Matplotlib); embedded C for timing; energy accounting.</p>
+<h2>Key Contributions</h2>
+<p>tbc</p>
+<h2>Results/Impact</h2>
+<p>tbc</p>
+<h2>Challenges & Lessons</h2>
+<p>tbc</p>
+<h2>Artifacts</h2>
+<p>tbc</p>
+<h2>What's Next</h2>
+<p>tbc</p>
     `
   },
   {
-    slug: 'tunnel-monitoring-automation',
-    title: 'Tunnel Monitoring Automation',
-    description: 'Engineering education project for automated infrastructure monitoring systems',
-    tags: ['Engineering', 'IoT', 'Automation'],
-    icon: 'fas fa-mountain',
+    slug: 'wearable-ultrasound-cardiovascular',
+    title: 'Wearable Ultrasound Cardiovascular Sensor',
+    description: 'Developing a wearable sensor to continuously monitor blood pressure using ultrasound echoes. Addressed challenges in transducer selection, acoustic coupling, phantom design, and analog front-end prototyping.',
+    tags: ['Hardware', 'Medical Device', 'Signal Processing'],
+    icon: 'fas fa-stethoscope',
     color: 'secondary' as const,
     content: `
-# Tunnel Monitoring Automation
-
-## Project Overview
-Developed an automated monitoring system for tunnel infrastructure as part of an engineering education initiative.
-
-## System Features
-- Real-time structural health monitoring
-- Automated alert systems
-- IoT sensor network integration
-- Data visualization dashboard
-
-## Technical Implementation
-- Sensor placement optimization
-- Wireless communication protocols
-- Edge computing for data processing
-- Machine learning for anomaly detection
-
-## Educational Impact
-This project demonstrates practical applications of engineering principles in infrastructure management and safety.
+<h1>Wearable Ultrasound-Based Blood Pressure Monitoring</h1>
+<h2>Role</h2>
+<p>Hardware Engineer, Prof. James Landay's HCI Lab (Co-Director, Stanford HAI)</p>
+<h2>Dates</h2>
+<p>March 2025—present</p>
+<h2>Overview</h2>
+<p>Developing a wearable sensor to continuously monitor blood pressure using ultrasound echoes. Addressed challenges in transducer selection, acoustic coupling, phantom design, and analog front-end (AFE) prototyping, while building Python pipelines for simulation and signal analysis.</p>
+<h2>Key Contributions</h2>
+<ul>
+<li>Characterized PZT transducers with impedance sweeps; optimized resonance/Q factors for efficient drive frequencies.</li>
+<li>Designed agarose/silicone vascular phantoms to mimic tissue attenuation and scattering, enabling repeatable test conditions.</li>
+<li>Scoped AFE architecture with gain/noise tradeoff analysis; early layout decisions for low-noise, low-power operation.</li>
+<li>Built Python workflows for filtering, envelope detection, and SNR analysis; validated feature stability across distances.</li>
+</ul>
+<h2>Impact</h2>
+<p>Established repeatable phantom protocols and reliable ultrasound signatures, forming the foundation for next-stage energy-aware designs and multimodal fusion with optical sensors.</p>
+<h2>Challenges & Lessons</h2>
+<p>Tackled acoustic coupling drift, motion artifacts, and trade-offs between burst vs. continuous-wave excitation. Learned to balance hardware robustness with physiological realism.</p>
+<h2>Artifacts</h2>
+<p>Poster and presentation slides.</p>
+<h2>What's Next</h2>
+<p>Integrating PPG triggers, refining AFE + enclosure design, and running user studies toward a wearable prototype.</p>
     `
   },
   {
-    slug: 'piano-tiles-embedded',
-    title: 'Piano Tiles Embedded',
-    description: 'CS107E embedded systems project recreating the popular mobile game',
+    slug: 'eeg-code-switching-research',
+    title: 'EEG Code-Switching Research',
+    description: 'Using EEG to study French↔English code-switching; built end-to-end preprocessing (artifact rejection, epoching, baseline) and ERP (N400) analysis; exploring transformer-based token/context predictors for switch likelihood.',
+    tags: ['Neuroscience', 'Research', 'Signal Processing'],
+    icon: 'fas fa-brain',
+    color: 'accent' as const,
+    content: `
+<h1>Neural Signatures of Bilingual Code-Switching</h1>
+<h2>Role</h2>
+<p>Programmer/RA; experiment ops, preprocessing, analysis</p>
+<h2>Dates</h2>
+<p>Jan 2025—present</p>
+<h2>TL;DR</h2>
+<p>Using EEG to study French↔English code-switching; built end-to-end preprocessing (artifact rejection, epoching, baseline) and ERP (N400) analysis; exploring transformer-based token/context predictors for switch likelihood.</p>
+<h2>Context</h2>
+<p>How brain responses shift when speakers switch languages mid-sentence.</p>
+<h2>My Tasks</h2>
+<p>IRB/ops support; 50+ hours data collection; MATLAB/ERP-Studio pipeline; scripts for ICA/ASR, channel interpolation, epoching, and condition contrasts; preliminary modeling.</p>
+<h2>Methods & Stack</h2>
+<p>MATLAB, ERP-Studio; Python prototypes; event-aligned ERP averaging.</p>
+<h2>Key Contributions</h2>
+<ul>
+<li>Reusable preprocessing toolkit + tutorial docs for new RAs.</li>
+<li>Robust N400 extraction over switch vs. non-switch contexts.</li>
+</ul>
+<h2>Results/Impact</h2>
+<p>Clean datasets and figures ready for internal presentations; foundation for publication-grade analyses.</p>
+<h2>Challenges & Lessons</h2>
+<p>Muscle/eye artifacts; bilingual balance; trigger timings; inter-subject variability.</p>
+<h2>Artifacts</h2>
+<p>Preprocessing scripts; ERP figures; slides</p>
+<h2>What's Next</h2>
+<p>Cross-lingual generalization and time–frequency analyses.</p>
+    `
+  },
+  {
+    slug: 'hk-productivity-council-robotics',
+    title: 'HK Productivity Council — Robotics & AI Intern',
+    description: 'Built transformer models on magnetic flux leakage data for rope defect regression/classification; trained YOLO for defect/PPE detection; shipped a Flask UI for technician reports; wrote a gov-standard AI architecture report.',
+    tags: ['AI/ML', 'Computer Vision', 'Industry'],
+    icon: 'fas fa-robot',
+    color: 'primary' as const,
+    content: `
+<h1>Predictive Maintenance for Peak Tram + PPE Detection</h1>
+<h2>Role</h2>
+<p>Robotics/AI intern in the Robotics & AI division</p>
+<h2>Dates</h2>
+<p>Jun–Aug 2024</p>
+<h2>TL;DR</h2>
+<p>Built transformer models on magnetic flux leakage data for rope defect regression/classification; trained YOLO for defect/PPE detection; shipped a Flask UI for technician reports; wrote a gov-standard AI architecture report; presented to stakeholders.</p>
+<h2>My Tasks</h2>
+<p>Data prep; model design; eval; UI prototyping; client demos; report authoring; conference presentations.</p>
+<h2>Methods & Stack</h2>
+<p>Transformers (time series), YOLO, Python/Flask, OpenCV; SAM/NeRF literature scan for future diagnostics; stakeholder interviews.</p>
+<h2>Key Contributions</h2>
+<ul>
+<li>Improved early defect prediction with supervised baselines + transformers.</li>
+<li>Deployed YOLO pipelines to flag rope defects and PPE compliance in construction settings.</li>
+<li>Built a simple report-generator UI to streamline workflows.</li>
+<li>Authored compliance-minded architecture report for public-sector standards.</li>
+</ul>
+<h2>Results/Impact</h2>
+<p>Better inspection coverage; faster technician handoffs; stronger safety posture.</p>
+<h2>Challenges & Lessons</h2>
+<p>Dataset drift; labeling noise; integrating CV predictions into daily operations.</p>
+<h2>Artifacts</h2>
+<p>Demo videos, Flask UI screenshots, internal reports.</p>
+<h2>What's Next</h2>
+<p>On-device models; active-learning loop with technician feedback.</p>
+    `
+  },
+  {
+    slug: 'slac-stanford-energy-genai',
+    title: 'SLAC x Stanford Energy — GenAI & Grid Cybersecurity',
+    description: 'Analyzed how LLMs lower attacker barriers (phishing, exploit scaffolding) and how they can bolster defense (anomaly detection, playbook automation). Produced state-of-the-union report, mapped opportunities.',
+    tags: ['Cybersecurity', 'AI', 'Energy'],
+    icon: 'fas fa-shield-alt',
+    color: 'secondary' as const,
+    content: `
+<h1>Generative AI Risks & Defenses for the Electric Grid</h1>
+<h2>Role</h2>
+<p>Student researcher + Energy Club project member</p>
+<h2>Dates</h2>
+<p>Jan – Mar 2024</p>
+<h2>TL;DR</h2>
+<p>Analyzed how LLMs lower attacker barriers (phishing, exploit scaffolding) and how they can bolster defense (anomaly detection, playbook automation). Produced state-of-the-union report, mapped opportunities, and proposed digital twins, honeypots, and SOC workflows tailored to grid ops.</p>
+<h2>My Tasks</h2>
+<p>Literature/state-survey; IoT/smart-meter threat analysis; scenario design; stakeholder readouts.</p>
+<h2>Methods & Stack</h2>
+<p>Red/blue-team mental models; evaluation rubrics for LLM assistance; data-flow diagrams.</p>
+<h2>Key Contributions</h2>
+<ul>
+<li>Clear taxonomy of attack/defense LLM use cases in grid contexts.</li>
+<li>Decision frameworks for operator adoption under safety/regulatory constraints.</li>
+<li>Briefings to peers; templates for pilot studies.</li>
+</ul>
+<h2>Results/Impact</h2>
+<p>Sharpened understanding of risks; concrete pilots proposed.</p>
+<h2>Challenges & Lessons</h2>
+<p>Hallucination risk; auditability; incident response timing.</p>
+<h2>Artifacts</h2>
+<p>Report PDFs, slide decks</p>
+<h2>What's Next</h2>
+<p>tbc</p>
+    `
+  },
+  {
+    slug: 'cs107e-piano-tiles',
+    title: 'CS107E — Bare-Metal "Piano Tiles"',
+    description: 'Built a real-time rhythm game with no OS: precise timers, pixel-based animation, and MIDI sync to an electronic keyboard.',
     tags: ['Embedded', 'C Programming', 'Game Dev'],
     icon: 'fas fa-microchip',
     color: 'accent' as const,
     content: `
-# Piano Tiles Embedded System
-
-## Project Description
-Recreation of the popular Piano Tiles mobile game using embedded systems programming in C for CS107E.
-
-## Technical Challenges
-- Real-time input processing
-- Graphics rendering on limited hardware
-- Audio synchronization
-- Memory management optimization
-
-## Implementation Details
-- Custom graphics library development
-- Interrupt-driven input handling
-- Timer-based game logic
-- Hardware abstraction layer
-
-## Learning Outcomes
-This project provided deep understanding of low-level system programming and hardware-software interaction.
+<h1>Piano Tiles on Microcontroller + MIDI</h1>
+<h2>Role</h2>
+<p>Low-level C programmer</p>
+<h2>Dates</h2>
+<p>Nov 2024</p>
+<h2>TL;DR</h2>
+<p>Built a real-time rhythm game with no OS: precise timers, pixel-based animation, and MIDI sync to an electronic keyboard.</p>
+<h2>My Tasks</h2>
+<p>Timer config; debouncing; fixed-point math; MIDI parser; frame pacing; LED driver over SPI.</p>
+<h2>Methods & Stack</h2>
+<p>C, register-level I/O, MIDI protocol, SPI LEDs, logic analyzer.</p>
+<h2>Key Contributions</h2>
+<p>Deterministic timing loop; decoupled MIDI ISR from render; tooling for latency/jitter profiling.</p>
+<h2>Results/Impact</h2>
+<p>Smooth gameplay; accurate note alignment; lab demo success.</p>
+<h2>Challenges & Lessons</h2>
+<p>ISR priority inversions; tight RAM/stack budgets.</p>
+<h2>Artifacts</h2>
+<p>Video demo; code snippets; timing plots.</p>
+<h2>What's Next</h2>
+<p>tbc</p>
     `
   },
   {
-    slug: 'mr-washiwashi-puffy',
-    title: 'Mr. Washiwashi Puffy',
-    description: 'Medical device project from BIOE 70Q focusing on innovative healthcare solutions',
+    slug: 'bioe-70q-earpop-buddy',
+    title: 'BIOE 70Q — EarPop Buddy',
+    description: '3D-printed modular trainer addressing over-pressurization risks: whistle feedback for too-hard exhalation and age-scaled balloon boxes tuned to typical lung capacities.',
     tags: ['Bioengineering', 'Medical Device', 'Design'],
     icon: 'fas fa-heartbeat',
     color: 'primary' as const,
     content: `
-# Mr. Washiwashi Puffy - Medical Device Innovation
-
-## Project Overview
-Innovative medical device developed as part of BIOE 70Q, addressing specific healthcare challenges through engineering design.
-
-## Design Process
-- Clinical need identification
-- User-centered design methodology
-- Iterative prototyping
-- Clinical validation testing
-
-## Key Features
-- Patient-friendly interface
-- Non-invasive monitoring
-- Real-time data collection
-- Integration with existing hospital systems
-
-## Impact
-This device has potential to improve patient outcomes while reducing healthcare costs through innovative monitoring solutions.
+<h1>Safe Ear-Pressure Trainer for Kids</h1>
+<h2>Role</h2>
+<p>Designer + prototyper</p>
+<h2>Dates</h2>
+<p>Mar 2025</p>
+<h2>TL;DR</h2>
+<p>3D-printed modular trainer addressing over-pressurization risks: whistle feedback for too-hard exhalation and age-scaled balloon boxes tuned to typical lung capacities; built simple instructional site.</p>
+<h2>My Tasks</h2>
+<p>CAD + 3D print; airflow experiments; user-centric design; quick web copy.</p>
+<h2>Methods & Stack</h2>
+<p>CAD + 3D print; airflow experiments; user-centric design; quick web copy.</p>
+<h2>Key Contributions</h2>
+<p>Mechanism that constrains pressure mechanically; fun feedback for adherence; low-cost parts.</p>
+<h2>Results/Impact</h2>
+<p>Safer practice for Valsalva-style exercises; easier parental supervision.</p>
+<h2>Challenges & Lessons</h2>
+<p>tbc</p>
+<h2>Artifacts</h2>
+<p>tbc</p>
+<h2>What's Next</h2>
+<p>Pressure sensing + mobile companion app.</p>
     `
   },
   {
-    slug: 'tedx-biomimicry',
-    title: 'TEDx BioMimicry Project',
-    description: 'Exploring nature-inspired design solutions and presenting insights at TEDx',
-    tags: ['BioMimicry', 'Design', 'Research'],
-    icon: 'fas fa-leaf',
-    color: 'secondary' as const,
-    content: `
-# TEDx BioMimicry: Learning from Nature
-
-## Talk Overview
-Presented research on biomimicry and nature-inspired design solutions at a TEDx event, showcasing how natural systems inform engineering.
-
-## Key Topics
-- Structural optimization in nature
-- Energy efficiency in biological systems
-- Adaptive materials and structures
-- Applications in technology and design
-
-## Research Findings
-- Analysis of natural efficiency principles
-- Case studies in biomimetic design
-- Future applications in engineering
-- Sustainability implications
-
-## Public Engagement
-This talk aimed to inspire broader adoption of nature-inspired design principles in technology development.
-    `
-  },
-  {
-    slug: 'satellite-avionics-ssi',
-    title: 'Satellite Avionics (SSI)',
-    description: 'Advanced avionics systems development for Stanford Student Space Initiative',
+    slug: 'stanford-space-initiative-picubed',
+    title: 'Stanford Space Initiative — PiCubed Avionics',
+    description: 'Engineering the PiCubed avionics board, the satellite\'s core flight computer based on the RP2350 microcontroller. Focused on watchdog reliability, SPI/LED subsystem integration, and board-level debugging.',
     tags: ['Aerospace', 'Avionics', 'Systems'],
     icon: 'fas fa-satellite',
     color: 'secondary' as const,
     content: `
-# Satellite Avionics System - Stanford Student Space Initiative
-
-## Project Mission
-Development of advanced avionics systems for Stanford Student Space Initiative satellite missions.
-
-## System Components
-- Flight computer design
-- Communication systems
-- Attitude determination and control
-- Power management systems
-
-## Technical Challenges
-- Radiation-hardened electronics
-- Low-power operation requirements
-- Thermal management in space
-- Reliable communication protocols
-
-## Achievements
-Successfully designed and tested avionics systems that meet space-grade reliability and performance requirements.
+<h1>Stanford CubeSat (Launch: Jan 2026)</h1>
+<h2>Role</h2>
+<p>Avionics Engineer</p>
+<h2>Dates</h2>
+<p>Dec 2024—Present</p>
+<h2>Overview</h2>
+<p>Engineering the PiCubed avionics board, the satellite's core flight computer based on the RP2350 microcontroller. Focused on watchdog reliability, SPI/LED subsystem integration, and board-level debugging under space-grade reliability constraints.</p>
+<h2>Key Contributions</h2>
+<ul>
+<li>Firmware Bring-Up: Brought the RP2350 stack online; implemented watchdog timer logic and verified reset recovery under injected fault conditions.</li>
+<li>Debug & Visibility: Developed SPI-driven Neopixel LED system to visualize board states in real time, easing test and integration workflows.</li>
+<li>Board-Level Reliability: Ran systematic fault-injection experiments; validated recovery paths and watchdog coverage.</li>
+<li>Test Infrastructure: Designed early regression test harness concepts, bridging firmware and hardware to accelerate bring-up cycles.</li>
+</ul>
+<h2>Impact</h2>
+<p>Increased fault tolerance and observability of the PiCubed avionics stack, improving test throughput and confidence in board stability ahead of flight integration.</p>
+<h2>Challenges & Lessons</h2>
+<p>tbc</p>
+<h2>Artifacts</h2>
+<p>Integration notes, debug logs, board test demos.</p>
+<h2>What's Next</h2>
+<p>Build automated test equipment (ATE) harness for regression campaigns, add telemetry hooks, and contribute to CubeSat-level systems integration and flight-readiness reviews.</p>
     `
   },
   {
-    slug: 'colic-03-robot',
-    title: 'Colic-03 Robot Project',
-    description: 'Advanced robotics project focusing on autonomous navigation and task completion',
-    tags: ['Robotics', 'AI', 'Autonomous Systems'],
-    icon: 'fas fa-robot',
+    slug: 'stanford-robotics-calligraphy',
+    title: 'Stanford Robotics Club — Robotic Calligraphy',
+    description: 'Converted a 3D printer into a robotic calligraphy system by hijacking its stepper motors and limit switches. Built control pipelines to reproduce human brush strokes.',
+    tags: ['Robotics', 'Controls', 'Cultural Heritage'],
+    icon: 'fas fa-paint-brush',
     color: 'accent' as const,
     content: `
-# Colic-03 Autonomous Robot
-
-## Robot Overview
-Advanced autonomous robot capable of navigation and task completion in complex environments.
-
-## Key Capabilities
-- SLAM (Simultaneous Localization and Mapping)
-- Object recognition and manipulation
-- Path planning and obstacle avoidance
-- Multi-sensor fusion
-
-## Technical Implementation
-- Computer vision systems
-- Machine learning algorithms
-- Real-time control systems
-- Sensor integration and calibration
-
-## Applications
-This robot demonstrates principles applicable to warehouse automation, service robotics, and autonomous vehicles.
+<h1>Chinese Calligraphy Robot</h1>
+<h2>Role</h2>
+<p>Hardware & Controls Engineer</p>
+<h2>Dates</h2>
+<p>2024—Present</p>
+<h2>Overview</h2>
+<p>Converted a 3D printer into a robotic calligraphy system by hijacking its stepper motors and limit switches. Built control pipelines to reproduce human brush strokes and designed hardware to support authentic Chinese calligraphy workflows.</p>
+<h2>Key Contributions</h2>
+<ul>
+<li>Machine Repurposing: Rewired the printer's motion system, using only stepper motors + limit switches for homing and calibration. Controlled motion directly via serial (RPi ↔ Arduino IDE firmware), bypassing G-code.</li>
+<li>Control & Planning: Implemented coordinate-based movement (x, y, z) for precise brush placement; synchronized stroke sequences to mimic pen-plotter behavior.</li>
+<li>Human Data Capture: Built input system to record human pen trajectories; paired with camera feedback to detect unwritten grid boxes on paper.</li>
+<li>Hardware Mods: 3D-printed a brush holder and auto-refill station to dip the pen in water/ink between strokes.</li>
+<li>Embedded Integration: Developed microcontroller firmware and serial communication for real-time command execution and debugging.</li>
+</ul>
+<h2>Impact</h2>
+<p>Demonstrated a low-cost platform that merges robotics, embedded systems, and cultural heritage. Used in demos to showcase how machines can preserve and reinterpret human artistry.</p>
+<h2>Challenges & Lessons</h2>
+<p>tbc</p>
+<h2>Artifacts</h2>
+<p>tbc</p>
+<h2>What's Next</h2>
+<p>Adding force-sensing brush tips for pressure-aware strokes and style-transfer algorithms to replay captured calligrapher signatures.</p>
     `
   },
   {
-    slug: 'personal-tutor-llm',
-    title: 'Personal Tutor App (LLM)',
-    description: 'AI-powered educational assistant leveraging large language models',
-    tags: ['AI/ML', 'Education', 'LLM'],
-    icon: 'fas fa-brain',
-    color: 'accent' as const,
+    slug: 'eesw-severn-tunnel-crack-detection',
+    title: 'EESW — Severn Tunnel Crack Detection',
+    description: 'Built a TensorFlow CNN and OpenCV pipeline to detect tunnel cracks from video; recognized by industry and invited by Aston Martin\'s COO to visit the factory; awarded Wales Engineering Student of the Year.',
+    tags: ['Computer Vision', 'Infrastructure', 'Award'],
+    icon: 'fas fa-mountain',
+    color: 'primary' as const,
     content: `
-# AI-Powered Personal Tutor Application
-
-## Application Overview
-Developed an intelligent tutoring system leveraging large language models to provide personalized educational assistance.
-
-## Core Features
-- Adaptive learning pathways
-- Natural language interaction
-- Progress tracking and analytics
-- Multi-subject support
-
-## Technical Architecture
-- LLM integration and fine-tuning
-- Natural language processing
-- User interface design
-- Database management for learning analytics
-
-## Educational Impact
-This application demonstrates the potential of AI to democratize access to personalized education and support diverse learning styles.
+<h1>Automating Tunnel Safety with CNNs</h1>
+<h2>Role</h2>
+<p>Assistant engineer (student team)</p>
+<h2>Dates</h2>
+<p>2021–2022</p>
+<h2>TL;DR</h2>
+<p>Built a TensorFlow CNN and OpenCV pipeline to detect tunnel cracks from video; recognized by industry and invited by Aston Martin's COO to visit the factory; awarded Wales Engineering Student of the Year among ~600 applicants.</p>
+<h2>My Tasks</h2>
+<p>Data capture; grayscale/denoise; patch extraction; CNN training; onsite tests on brick walls.</p>
+<h2>Methods & Stack</h2>
+<p>TensorFlow, OpenCV, Python, CNN architecture design.</p>
+<h2>Key Contributions</h2>
+<p>tbc</p>
+<h2>Results/Impact</h2>
+<p>Proof-of-concept that student ML can aid infrastructure safety; public recognition.</p>
+<h2>Challenges & Lessons</h2>
+<p>tbc</p>
+<h2>Artifacts</h2>
+<p>tbc</p>
+<h2>What's Next</h2>
+<p>Domain adaptation for low-light/wet surfaces; embedded inference.</p>
+    `
+  },
+  {
+    slug: 'tedx-biomimicry-talk',
+    title: 'TEDxYouth@CardiffSixthFormCollege — Biomimicry Talk',
+    description: 'Talk explored whale-fin aerodynamics → airplane efficiency and autonomous vehicles → congestion relief; argued for moving beyond brute industrial scaling to nature-inspired design; ~6k views.',
+    tags: ['Public Speaking', 'BioMimicry', 'Design'],
+    icon: 'fas fa-leaf',
+    color: 'secondary' as const,
+    content: `
+<h1>Learning from Nature to Heal Nature</h1>
+<h2>Role</h2>
+<p>Founding member, speaker</p>
+<h2>Dates</h2>
+<p>2022</p>
+<h2>TL;DR</h2>
+<p>Talk explored whale-fin aerodynamics → airplane efficiency and autonomous vehicles → congestion relief; argued for moving beyond brute industrial scaling to nature-inspired design; ~6k views.</p>
+<h2>Context</h2>
+<p>tbc</p>
+<h2>My Tasks</h2>
+<p>tbc</p>
+<h2>Methods & Stack</h2>
+<p>tbc</p>
+<h2>Key Contributions</h2>
+<p>tbc</p>
+<h2>Results/Impact</h2>
+<p>tbc</p>
+<h2>Challenges & Lessons</h2>
+<p>tbc</p>
+<h2>Artifacts</h2>
+<p>Video link; slides.</p>
+<h2>What's Next</h2>
+<p>tbc</p>
     `
   }
 ]
 
 export const researchProjects = [
   {
-    slug: 'eeg-erp-research',
-    title: 'EEG / ERP Research Project',
-    description: 'Investigating neural responses through electroencephalography and event-related potentials, exploring cognitive processing patterns and brain-computer interface applications.',
-    tags: ['Neuroscience', 'EEG', 'Signal Processing'],
-    icon: 'fas fa-brain',
+    slug: 'information-efficient-ultrasound-research',
+    title: 'Information-Efficient Ultrasound Sensing',
+    description: 'Designing ultra-low-power pipeline for cardiovascular ultrasound by triggering bursts from PPG-derived heartbeat and reducing duty cycle without losing diagnostic signal fidelity.',
+    tags: ['Research', 'Signal Processing', 'Healthcare Tech'],
+    icon: 'fas fa-heartbeat',
     color: 'primary' as const,
     content: `
-# EEG/ERP Research: Neural Response Investigation
+# Cutting Power with Information Theory in Wearable Ultrasound
 
-## Research Overview
-Comprehensive study of neural responses using electroencephalography (EEG) and event-related potentials (ERP) to understand cognitive processing patterns.
+## Role
+Lead researcher/engineer
 
-## Methodology
-- High-density EEG recording systems
-- Controlled experimental paradigms
-- Advanced signal processing techniques
-- Statistical analysis of neural responses
+## Dates
+2025—present
 
-## Key Findings
-- Identified specific neural markers for cognitive processes
-- Developed improved signal processing algorithms
-- Characterized individual differences in neural responses
-- Applications to brain-computer interface development
+## TL;DR
+Designing an ultra-low-power pipeline for cardiovascular ultrasound by triggering bursts from a PPG-derived heartbeat and reducing duty cycle without losing diagnostic signal fidelity.
 
-## Future Directions
-This research opens pathways for enhanced brain-computer interfaces and personalized neurofeedback systems.
+## Context
+Wearable ultrasound is data- and power-hungry. Always-on excitation and sampling waste energy.
+
+## My Tasks
+Problem framing; modeling SNR vs. duty-cycle; designing PPG→ultrasound trigger; firmware sample-gating; analysis pipeline; experiments on phantoms.
+
+## Methods & Stack
+PZT transducers; analog front-end; matched-filtering; burst excitation; R-wave gating (PPG proxy); mutual information estimates for feature retention; Python (NumPy/SciPy/Matplotlib); embedded C for timing; energy accounting.
+
+## Key Contributions
+tbc
+
+## Results/Impact
+tbc
+
+## Challenges & Lessons
+tbc
+
+## Artifacts
+tbc
+
+## What's Next
+tbc
     `
   },
   {
-    slug: 'ultrasound-hardware',
-    title: 'Ultrasound Hardware Project',
-    description: 'Development of advanced ultrasound imaging systems with focus on hardware optimization and signal processing algorithms for enhanced medical diagnostics.',
-    tags: ['Medical Imaging', 'Hardware', 'Biomedical'],
-    icon: 'fas fa-wave-square',
-    color: 'secondary' as const,
-    content: `
-# Advanced Ultrasound Imaging System
-
-## Research Objective
-Development of next-generation ultrasound imaging hardware with enhanced resolution and diagnostic capabilities.
-
-## Technical Innovations
-- Novel transducer array designs
-- Improved beamforming algorithms
-- Real-time image processing
-- Portable hardware architecture
-
-## Clinical Applications
-- Enhanced cardiac imaging
-- Improved fetal monitoring
-- Point-of-care diagnostics
-- Interventional guidance
-
-## Impact
-This research contributes to making high-quality medical imaging more accessible and affordable globally.
-    `
-  },
-  {
-    slug: 'energy-saving-information-theory',
-    title: 'Energy-Saving Information Theory',
-    description: 'Exploring theoretical frameworks for energy-efficient information processing and transmission, with applications to sustainable computing and communication systems.',
-    tags: ['Information Theory', 'Energy Efficiency', 'Sustainability'],
-    icon: 'fas fa-bolt',
+    slug: 'eeg-code-switching-research',
+    title: 'EEG Code-Switching Research',
+    description: 'Using EEG to study French↔English code-switching; built end-to-end preprocessing (artifact rejection, epoching, baseline) and ERP (N400) analysis; exploring transformer-based token/context predictors for switch likelihood.',
+    tags: ['Neuroscience', 'Research', 'Signal Processing'],
+    icon: 'fas fa-brain',
     color: 'accent' as const,
     content: `
-# Energy-Efficient Information Processing Theory
+# Neural Signatures of Bilingual Code-Switching
 
-## Research Focus
-Theoretical investigation of energy-efficient information processing and transmission methods for sustainable computing systems.
+## Role
+Programmer/RA; experiment ops, preprocessing, analysis
 
-## Key Concepts
-- Thermodynamics of computation
-- Energy-optimal coding schemes
-- Distributed processing algorithms
-- Green communication protocols
+## Dates
+Jan 2025—present
 
-## Applications
-- Low-power IoT devices
-- Sustainable data centers
-- Energy-harvesting systems
-- Mobile computing optimization
+## TL;DR
+Using EEG to study French↔English code-switching; built end-to-end preprocessing (artifact rejection, epoching, baseline) and ERP (N400) analysis; exploring transformer-based token/context predictors for switch likelihood.
 
-## Theoretical Contributions
-This research provides fundamental insights into the energy limits of information processing and practical approaches to approach these limits.
+## Context
+How brain responses shift when speakers switch languages mid-sentence.
+
+## My Tasks
+IRB/ops support; 50+ hours data collection; MATLAB/ERP-Studio pipeline; scripts for ICA/ASR, channel interpolation, epoching, and condition contrasts; preliminary modeling.
+
+## Methods & Stack
+MATLAB, ERP-Studio; Python prototypes; event-aligned ERP averaging.
+
+## Key Contributions
+- Reusable preprocessing toolkit + tutorial docs for new RAs.
+- Robust N400 extraction over switch vs. non-switch contexts.
+
+## Results/Impact
+Clean datasets and figures ready for internal presentations; foundation for publication-grade analyses.
+
+## Challenges & Lessons
+Muscle/eye artifacts; bilingual balance; trigger timings; inter-subject variability.
+
+## Artifacts
+Preprocessing scripts; ERP figures; slides
+
+## What's Next
+Cross-lingual generalization and time–frequency analyses.
+    `
+  },
+  {
+    slug: 'wearable-ultrasound-cardiovascular-research',
+    title: 'Wearable Ultrasound Cardiovascular Sensor',
+    description: 'Developing a wearable sensor to continuously monitor blood pressure using ultrasound echoes. Addressed challenges in transducer selection, acoustic coupling, phantom design, and analog front-end prototyping.',
+    tags: ['Hardware', 'Medical Device', 'Signal Processing'],
+    icon: 'fas fa-stethoscope',
+    color: 'secondary' as const,
+    content: `
+# Wearable Ultrasound-Based Blood Pressure Monitoring
+
+## Role
+Hardware Engineer, Prof. James Landay's HCI Lab (Co-Director, Stanford HAI)
+
+## Dates
+March 2025—present
+
+## Overview
+Developing a wearable sensor to continuously monitor blood pressure using ultrasound echoes. Addressed challenges in transducer selection, acoustic coupling, phantom design, and analog front-end (AFE) prototyping, while building Python pipelines for simulation and signal analysis.
+
+## Key Contributions
+- Characterized PZT transducers with impedance sweeps; optimized resonance/Q factors for efficient drive frequencies.
+- Designed agarose/silicone vascular phantoms to mimic tissue attenuation and scattering, enabling repeatable test conditions.
+- Scoped AFE architecture with gain/noise tradeoff analysis; early layout decisions for low-noise, low-power operation.
+- Built Python workflows for filtering, envelope detection, and SNR analysis; validated feature stability across distances.
+
+## Impact
+Established repeatable phantom protocols and reliable ultrasound signatures, forming the foundation for next-stage energy-aware designs and multimodal fusion with optical sensors.
+
+## Challenges & Lessons
+Tackled acoustic coupling drift, motion artifacts, and trade-offs between burst vs. continuous-wave excitation. Learned to balance hardware robustness with physiological realism.
+
+## Artifacts
+Poster and presentation slides.
+
+## What's Next
+Integrating PPG triggers, refining AFE + enclosure design, and running user studies toward a wearable prototype.
     `
   }
 ]
@@ -488,23 +659,31 @@ Quantum mechanics raises profound questions about the nature of reality, measure
 
 export const extracurriculars = [
   {
-    name: 'Hong Kong Student Association',
-    description: 'Connecting with fellow Hong Kong students and organizing cultural events'
-  },
-  {
-    name: 'Stanford Healthcare Design Challenge',
-    description: 'Designing innovative solutions for healthcare challenges through interdisciplinary collaboration'
+    name: 'Hong Kong Student Association (HKSA)',
+    description: 'President 2425 - Leading cultural events and community building for Hong Kong students'
   },
   {
     name: 'Veritas Forum',
-    description: 'Exploring life\'s biggest questions through dialogue between faith and academia'
+    description: 'Co-President 2526 - Exploring life\'s biggest questions through dialogue between faith and academia'
   },
   {
     name: 'Christian Union',
-    description: 'Building community and exploring faith in an academic environment'
+    description: 'Outreach - Building community and exploring faith in an academic environment'
   },
   {
-    name: 'Mellow Project',
-    description: 'Contributing to wellness and mindfulness initiatives on campus'
+    name: 'Stanford Healthcare Design Challenge',
+    description: 'Marketing - Designing innovative solutions for healthcare challenges through interdisciplinary collaboration'
+  },
+  {
+    name: 'Stanford Robotics Club',
+    description: 'Hardware & Controls Engineer - Working on Chinese Calligraphy Robot project'
+  },
+  {
+    name: 'Stanford Space Initiative',
+    description: 'Avionics Engineer - Engineering PiCubed avionics board for CubeSat launch (Jan 2026)'
+  },
+  {
+    name: 'Stanford Energy Club',
+    description: 'Event Director - Organizing events and contributing to energy research projects'
   }
 ]

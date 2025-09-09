@@ -2,10 +2,9 @@ import Navigation from '@/components/Navigation'
 import HeroSection from '@/components/HeroSection'
 import FadeIn from '@/components/FadeIn'
 import ProjectCard from '@/components/ProjectCard'
-import ResearchCard from '@/components/ResearchCard'
 import FloatingBubbles from '@/components/FloatingBubbles'
 import { Link } from 'wouter'
-import { projects, researchProjects, coolIdeas, extracurriculars } from '@/lib/data'
+import { projects, coolIdeas, extracurriculars } from '@/lib/data'
 
 export default function HomePage() {
   return (
@@ -51,29 +50,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Research Section */}
-        <section id="research" className="py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <FadeIn>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="gradient-text">Research</span>
-                </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Academic research spanning neuroscience, medical technology, and information theory
-                </p>
-              </div>
-            </FadeIn>
-            
-            <div className="space-y-8">
-              {researchProjects.map((research, index) => (
-                <FadeIn key={research.slug} delay={index * 0.2}>
-                  <ResearchCard research={research} />
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Me Yapping Section */}
         <section id="yapping" className="py-24">
@@ -81,7 +57,7 @@ export default function HomePage() {
             <FadeIn>
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="gradient-text">Me Yapping</span>
+                  <span className="gradient-text">Curiosities & Reflections</span>
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   My thoughts on ideas, philosophy, culture, art, and life - where curiosity meets commentary

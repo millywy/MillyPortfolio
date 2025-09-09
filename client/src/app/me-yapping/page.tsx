@@ -44,7 +44,7 @@ export default function MeYappingPage() {
           <FadeIn>
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="gradient-text">Me Yapping</span>
+                <span className="gradient-text">Curiosities & Reflections</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 My thoughts on ideas, philosophy, culture, art, and life - where curiosity meets commentary

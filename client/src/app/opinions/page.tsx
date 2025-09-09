@@ -61,7 +61,7 @@ export default function OpinionsPage() {
                 data-testid="link-back-me-yapping"
               >
                 <i className="fas fa-arrow-left"></i>
-                Back to Me Yapping
+                Back to Curiosities & Reflections
               </Link>
             </div>
             

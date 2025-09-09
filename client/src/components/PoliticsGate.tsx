@@ -23,7 +23,7 @@ export default function PoliticsGate({ children }: PoliticsGateProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const correctAnswer = process.env.NEXT_PUBLIC_POLITICS_PASS || 'carbon'
+    const correctAnswer = 'Minnnie'
     
     if (inputValue.toLowerCase().trim() === correctAnswer.toLowerCase()) {
       sessionStorage.setItem('politicsAccess', 'true')
@@ -59,7 +59,7 @@ export default function PoliticsGate({ children }: PoliticsGateProps) {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium mb-2">
-                What is Milly's favorite element?
+                What is Milly's first English name?
               </label>
               <input
                 type="text"

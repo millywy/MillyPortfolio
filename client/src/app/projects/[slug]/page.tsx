@@ -1,12 +1,15 @@
 import Navigation from '@/components/Navigation'
 import FadeIn from '@/components/FadeIn'
 import ImagePlaceholder from '@/components/ImagePlaceholder'
+import ProjectImage from '@/components/ProjectImage'
 import { projects } from '@/lib/data'
+import { getProjectImages } from '@/lib/projectImages'
 import { Link, useParams } from 'wouter'
 
 export default function ProjectPage() {
   const params = useParams<{slug: string}>()
   const project = projects.find((p) => p.slug === params.slug)
+  const projectImages = getProjectImages(params.slug)
 
   if (!project) {
     return (
@@ -83,30 +86,61 @@ export default function ProjectPage() {
               <h2 className="text-2xl font-bold mb-6">Project Gallery</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="animate-fly-in-left">
-                  <ImagePlaceholder 
-                    number={projects.findIndex(p => p.slug === params.slug) * 3 + 1} 
-                    alt={`${project.title} - Main Overview`}
-                    aspectRatio="photo"
-                    size="lg"
-                  />
+                  {projectImages ? (
+                    <ProjectImage 
+                      src={projectImages.main}
+                      alt={`${project.title} - Main Overview`}
+                      aspectRatio="photo"
+                      size="lg"
+                      fallbackNumber={projects.findIndex(p => p.slug === params.slug) * 3 + 1}
+                    />
+                  ) : (
+                    <ImagePlaceholder 
+                      number={projects.findIndex(p => p.slug === params.slug) * 3 + 1} 
+                      alt={`${project.title} - Main Overview`}
+                      aspectRatio="photo"
+                      size="lg"
+                    />
+                  )}
                 </div>
                 <div className="animate-fly-in-right" style={{animationDelay: '0.2s'}}>
-                  <ImagePlaceholder 
-                    number={projects.findIndex(p => p.slug === params.slug) * 3 + 2} 
-                    alt={`${project.title} - Technical Details`}
-                    aspectRatio="photo"
-                    size="lg"
-                  />
+                  {projectImages ? (
+                    <ProjectImage 
+                      src={projectImages.technical}
+                      alt={`${project.title} - Technical Details`}
+                      aspectRatio="photo"
+                      size="lg"
+                      fallbackNumber={projects.findIndex(p => p.slug === params.slug) * 3 + 2}
+                    />
+                  ) : (
+                    <ImagePlaceholder 
+                      number={projects.findIndex(p => p.slug === params.slug) * 3 + 2} 
+                      alt={`${project.title} - Technical Details`}
+                      aspectRatio="photo"
+                      size="lg"
+                    />
+                  )}
                 </div>
               </div>
               <div className="animate-fly-in-up" style={{animationDelay: '0.4s'}}>
-                <ImagePlaceholder 
-                  number={projects.findIndex(p => p.slug === params.slug) * 3 + 3} 
-                  alt={`${project.title} - Results and Impact`}
-                  aspectRatio="wide"
-                  size="xl"
-                  className="mb-8"
-                />
+                {projectImages ? (
+                  <ProjectImage 
+                    src={projectImages.results}
+                    alt={`${project.title} - Results and Impact`}
+                    aspectRatio="wide"
+                    size="xl"
+                    className="mb-8"
+                    fallbackNumber={projects.findIndex(p => p.slug === params.slug) * 3 + 3}
+                  />
+                ) : (
+                  <ImagePlaceholder 
+                    number={projects.findIndex(p => p.slug === params.slug) * 3 + 3} 
+                    alt={`${project.title} - Results and Impact`}
+                    aspectRatio="wide"
+                    size="xl"
+                    className="mb-8"
+                  />
+                )}
               </div>
             </div>
           </FadeIn>
@@ -114,7 +148,22 @@ export default function ProjectPage() {
           <FadeIn delay={0.6}>
             <div className="glass-card rounded-xl p-8">
               <div className="prose prose-invert max-w-none">
-                <div dangerouslySetInnerHTML={{ __html: project.content.replace(/\n/g, '<br />') }} />
+                <div 
+                  dangerouslySetInnerHTML={{ 
+                    __html: project.content
+                      .replace(/\n/g, '<br />')
+                      .replace(/# (.*?)(<br \/>|$)/g, '<h1 class="text-3xl font-bold mb-6 text-primary">$1</h1>')
+                      .replace(/## (.*?)(<br \/>|$)/g, '<h2 class="text-lg font-semibold mb-0 mt-2 text-yellow-400">$1</h2>')
+                      .replace(/^- (.*?)(<br \/>|$)/g, '<li class="mb-0 text-foreground">$1</li>')
+                      .replace(/<br \/><br \/>/g, '<br />')
+                      .replace(/<h1>/g, '<h1 class="text-3xl font-bold mb-6 text-primary">')
+                      .replace(/<h2>/g, '<h2 class="text-lg font-semibold mb-0 mt-2 text-yellow-400">')
+                      .replace(/<p>/g, '<p class="mb-0 text-foreground leading-relaxed">')
+                      .replace(/<ul>/g, '<ul class="mb-0 ml-4">')
+                      .replace(/<li>/g, '<li class="mb-0 text-foreground">')
+                      .replace(/# /g, '')
+                  }} 
+                />
               </div>
             </div>
           </FadeIn>
